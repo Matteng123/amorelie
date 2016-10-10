@@ -1,0 +1,35 @@
+.Box
+	display: inline-block
+	background-color: #333
+	float: left
+	position: relative
+	&--right
+		float: right
+	&--single
+		width: +unit(12)
+		padding-bottom: +unit(6)
+		+bp(medium)
+			width: +unit(6)
+			padding-bottom: +unit(6)
+	&--double
+		width: +unit(12)
+		padding-bottom: +unit(6)
+		+bp(medium)
+			width: +unit(6)
+			padding-bottom: +unit(3)
+		opacity: 0.9
+	&--tiny
+		width: +unit(12)
+		padding-bottom: +unit(6)
+		+bp(medium)
+			width: +unit(3)
+			padding-bottom: +unit(3)
+		opacity: 0.75
+	&-body
+	.Fb
+		position: absolute
+		left: 0
+		top: 0
+		height: 50px
+		width: 50px
+		background-color: rgba(0,0,0,0.1)

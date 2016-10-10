@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Amorelie</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="description" content="">
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/9a5dcd50-909d-4b19-94ef-3e6da7b9f4a8.css">
+        <link rel="apple-touch-icon" sizes="57x57" href="#{path}apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="#{path}apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="#{path}apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="#{path}apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="#{path}apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="#{path}apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="#{path}apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="#{path}apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="#{path}apple-touch-icon-180x180.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="#{path}apple-touch-startup-image-1024x748.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="#{path}apple-touch-startup-image-1536x2008.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="#{path}apple-touch-startup-image-2048x1496.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="#{path}apple-touch-startup-image-320x460.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="#{path}apple-touch-startup-image-640x1096.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="#{path}apple-touch-startup-image-640x920.png">
+        <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="#{path}apple-touch-startup-image-768x1004.png">
+        <link rel="icon" type="image/png" href="#{path}favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="#{path}favicon-230x230.png" sizes="230x230">
+        <link rel="icon" type="image/png" href="#{path}favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="#{path}android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="#{path}coast-228x228.png" sizes="228x228">
+        <link rel="icon" type="image/png" href="#{path}favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="#{path}android-chrome-manifest.json">
+        <link rel="shortcut icon" href="#{path}favicon.ico">
+        <link rel="yandex-tableau-widget" href="#{path}yandex-browser-manifest.json">
+        <meta property="og:image" content="#{path}open-graph.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="msapplication-TileColor" content="#{color}">
+        <meta name="msapplication-TileImage" content="#{path}mstile-144x144.png">
+        <meta name="msapplication-config" content="#{path}browserconfig.xml">
+        <meta name="theme-color" content="#{color}">
+    <style>
+      body {
+      	margin: 0;
+      	padding: 0;
+      	background-color: #fff;
+      }
+      .preloader {
+      	text-align:center;
+      	position: fixed;
+      	top: 0;
+      	width: 100%;
+      	height: 100%;
+      	z-index: 111110;
+      }
+      .preloader .curtain {
+      	background-color: #fff;
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	right: 0;
+      	bottom: 0;
+      	width: 100%;
+      	height: 100%;
+      	opacity: 0;
+      	-webkit-transition: opacity .75s;
+      	-moz-transition: opacity .75s;
+      	-ms-transition: opacity .75s;
+      	transition: opacity .75s;
+      }
+      .preloader .curtain {
+      	background-color: #fff;
+      	-moz-transition: opacity .75s;
+      	-ms-transition: opacity .75s;
+      	transition: opacity .75s;
+      }
+      .newload {
+      	overflow: hidden
+      }
+      .newload .preloader,
+      .loading .preloader,
+      .hideloader .preloader,
+      .loaded .preloader {
+      	z-index: 99999;
+      }
+      .newload .preloader .curtain,
+      .loading .preloader .curtain,
+      .loaded .preloader .curtain {
+      	opacity: 1;
+      }
+      .hideloader .preloader .curtain {
+      	opacity: 0;
+      }
+      .preloader .loader {
+      	display: inline-block;
+      	width: 60px;
+      	height: 60px;
+      	position: relative;
+      	border: 4px solid #9e8756;
+      	top: 50%;
+      	animation: loader 2s infinite ease;
+      	-webkit-animation: loader 2s infinite ease;
+      	-moz-animation: loader 2s infinite ease;
+      	-o-animation: loader 2s infinite ease;
+      }
+      .preloader .loader-inner {
+      	vertical-align: top;
+      	display: inline-block;
+      	width: 100%;
+      	background-color: #9e8756;
+      	animation: loader-inner 2s infinite ease-in;
+      	-webkit-animation: loader-inner 2s infinite ease-in;
+      	-moz-animation: loader-inner 2s infinite ease-in;
+      	-o-animation: loader-inner 2s infinite ease-in;
+      }
+      
+      @keyframes loader {
+        0% {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+        }
+      
+        25% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        50% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        75% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      
+        100% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      }
+      @-webkit-keyframes loader {
+        0% {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+        }
+      
+        25% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        50% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        75% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      
+        100% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      }
+      @-mos-keyframes loader {
+        0% {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+        }
+      
+        25% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        50% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        75% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      
+        100% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      }
+      @-o-keyframes loader {
+        0% {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+        }
+      
+        25% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        50% {
+          transform: rotate(225deg);
+          -webkit-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+        }
+      
+        75% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      
+        100% {
+          transform: rotate(405deg);
+          -webkit-transform: rotate(405deg);
+          -ms-transform: rotate(405deg);
+        }
+      }
+      
+      
+      @keyframes loader-inner {
+        0% {
+          height: 0%;
+        }
+      
+        25% {
+          height: 0%;
+        }
+      
+        50% {
+          height: 100%;
+        }
+      
+        75% {
+          height: 100%;
+        }
+      
+        100% {
+          height: 0%;
+        }
+      }
+      @-webkit-keyframes loader-inner {
+        0% {
+          height: 0%;
+        }
+      
+        25% {
+          height: 0%;
+        }
+      
+        50% {
+          height: 100%;
+        }
+      
+        75% {
+          height: 100%;
+        }
+      
+        100% {
+          height: 0%;
+        }
+      }
+      @-moz-keyframes loader-inner {
+        0% {
+          height: 0%;
+        }
+      
+        25% {
+          height: 0%;
+        }
+      
+        50% {
+          height: 100%;
+        }
+      
+        75% {
+          height: 100%;
+        }
+      
+        100% {
+          height: 0%;
+        }
+      }
+      @-o-keyframes loader-inner {
+        0% {
+          height: 0%;
+        }
+      
+        25% {
+          height: 0%;
+        }
+      
+        50% {
+          height: 100%;
+        }
+      
+        75% {
+          height: 100%;
+        }
+      
+        100% {
+          height: 0%;
+        }
+      }
+    </style>
+    <script>
+      var $buoop = {vs:{i:9,f:15,o:12.1,s:5.1},c:2}; 
+      function $buo_f(){ 
+      var e = document.createElement("script"); 
+      e.src = "//browser-update.org/update.min.js"; 
+      document.body.appendChild(e);
+      };
+      try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+      catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
+  </head>
+  <body class="loading">
+    <div class="Header">
+      <div class="Header-body">
+        <div class="Button--toggle"><span></span></div>
+      </div>
+      <div class="Navigation">
+        <div class="Navigation-bg-close"></div>
+        <div class="Button--close"><span></span></div>
+        <nav role="navigation"><span><img src="/assets/images/logo.svg"></span>
+          <ul>
+            <li><a href="/?section=fact1">Fakt 1</a></li>
+            <li><a href="/?section=fact2">Fakt 2</a></li>
+            <li><a href="/?section=fact3">Fakt 3</a></li>
+            <li><a href="/?section=fact4">Fakt 4</a></li>
+            <li><a href="/?section=fact5">Fakt 5</a></li>
+            <li><a href="/?section=fact6">Fakt 6</a></li>
+            <li><a href="/contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="Navigation-bg-close-content"></div>
+    </div>
+    <div class="Page" data-hook="switcher">
+      <div class="view">
+        <div id="start">
+          <div class="Intro">
+            <h1>Nackte Tatsachen</h1>
+            <p>Jeder kennt von uns</p><a>Weiter unten</a>
+          </div>
+        </div>
+        <div class="Boxen">
+          <div class="invisible" id="fact1"></div>
+          <div class="Box Box--single">
+            <div class="Fb"><span>Fakt</span><span>1</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact2"></div>
+          <div class="Box Box--double">
+            <div class="Fb"><span>Fakt</span><span>2</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact3"></div>
+          <div class="Box Box--tiny">
+            <div class="Fb"><span>Fakt</span><span>3</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact4"></div>
+          <div class="Box Box--tiny">
+            <div class="Fb"><span>Fakt</span><span>4</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact5"></div>
+          <div class="Box Box--double">
+            <div class="Fb"><span>Fakt</span><span>5</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact6"></div>
+          <div class="Box Box--single Box--right">
+            <div class="Fb"><span>Fakt</span><span>6</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact7"></div>
+          <div class="Box Box--tiny">
+            <div class="Fb"><span>Fakt</span><span>7</span></div>
+            <div class="Box-body"></div>
+          </div>
+          <div class="invisible" id="fact8"></div>
+          <div class="Box Box--tiny">
+            <div class="Fb"><span>Fakt</span><span>8</span></div>
+            <div class="Box-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Footer">
+      <div class="Footer-body">
+        <div>
+          <p>© 2016 by CADMAN</p>
+        </div>
+        <div><a href="/impressum.html">Impressum</a></div>
+      </div>
+    </div>
+    <div class="preloader">
+      <div class="curtain">
+        <div class="loader">
+          <div class="loader-inner"></div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/loader.js" type="text/javascript"></script>
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='/assets/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','XX-XXXXXX-XX');ga('set','anonymizeIp',true);ga('send','pageview');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+$color-selection: #9e8756
+$color-background: #000000
+$color-content: #ffffff
+$color-box: lighten(#9e8756, 20%)
+$color-text: #212121
+$color-headline: #cf524a
+$color-navigation: rgb(255, 0, 214)
+
+// WIDTH SIZE
+$max-size: 1600px
+$header-height: 64px
+
+// GAB SIZE
+$gap-size: 20px
+$gap-size-medium: 30px
+$gap-size-large: 40px
+
+
+
+// Mixins
+@import mixins/all
+
+// Vendor
+@import vendor/normalize
+@import vendor/owl
+
+// Generated
+@import generated/icons
+
+// Globals
+@import globals/reset
+@import globals/typography
+
+// Basic Module
+@import module/section
+@import module/boxen
+@import module/box
+
+
+// Standard Module
+@import module/header
+@import module/navigation
+@import module/hero
+@import module/contact
+@import module/form
+@import module/footer
