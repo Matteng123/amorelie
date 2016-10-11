@@ -3,22 +3,31 @@
 	.Button--close
 		span
 	nav(role="navigation")
-		span
-			img(src="/assets/images/logo.svg")
-		ul
-			li
-				a(href="/?section=fact1") Fakt 1
-			li
-				a(href="/?section=fact2") Fakt 2
-			li
-				a(href="/?section=fact3") Fakt 3
-			li
-				a(href="/?section=fact4") Fakt 4
-			li
-				a(href="/?section=fact5") Fakt 5
-			li
-				a(href="/?section=fact6") Fakt 6
-			li
-				a(href="/contact") Kontakt
+		table
+			tr
+				- for(var i=1; i<7; i++)
+					td
+						a(href="/?section=fact"+i) #{i}
+			tr
+				- for(var i=7; i<13; i++)
+					td
+						a(href="/?section=fact"+i) #{i}
+			tr
+				- for(var i=13; i<19; i++)
+					td
+						a(href="/?section=fact"+i) #{i}
+			tr
+				- for(var i=19; i<25; i++)
+					td
+						a(href="/?section=fact"+i) #{i}
+			tr
+				- for(var i=25; i<31; i++)
+					td
+						a(href="/?section=fact"+i) #{i}
+			tr
+				- for(var i=31; i<37; i++)
+					td
+						a(href="/?section=fact"+i) #{i}
+
 
 .Navigation-bg-close-content

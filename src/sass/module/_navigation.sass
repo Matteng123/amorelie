@@ -1,93 +1,68 @@
 .Navigation--show
-  .Navigation
-    height: 100%
-    min-height: 100%
-    width: 100%
-    left: 0
-    top: 0
-    z-index: 9999
-    +transform(scale(1))
-    nav li
-      margin-top: 5px
-      margin-bottom: 5px
+	.Navigation
+		width: 400px
+		height: 400px
+		right: 10px
+		top: 10px
+		z-index: 9999
+		+transform(scale(1))
+		+bp(large)
+			width: 500px
+			height: 500px
+			min-height: 500px
 
 .Navigation
-  position: absolute
-  width: 0px
-  height: 0px
-  top: 50%
-  left: 50%
-  overflow: hidden
-  z-index: 0
-  background-color: $color-navigation
-  +transform(scale(1.5))
-  +transition(transform, .35s)
-  +bp('large')
-    +transform(scale(1))
-    width: 100%
-    height: $header-height
-    top: 0
-    left: 0
-    
-  nav
-    position: absolute
-    top: 50%
-    width: 100%
-    +transform(translateY(-55%))
-    text-align: center
-    padding-top: 10%
-    +bp('large')
-      top: 0
-      padding-top: 0
-      +transform(translateY(0%))
+	position: absolute
+	width: 0px
+	height: 0px
+	top: 0%
+	right: 0%
+	overflow: hidden
+	z-index: 0
+	background-color: $color-navigation-bg
+	+transform(scale(1.5))
+	+transition(transform, .35s)
 
-    span
-      display: block
-      position: relative
-      margin-bottom: 30px
-      +noselect()
-      +bp('large')
-        display: none
-    li
-      +bp('large')
-        display: inline-block
-        margin: 0
-        padding: 0 10px
-        +transition(none, 0.75s)
-      list-style: none
-      margin: 0
-      margin-bottom: 20px
-      margin-top: 20px
-      letter-spacing: 0.1rem
-      cursor: pointer
-      +transition(margin, 0.4s)
+	nav
+		position: absolute
+		top: 50%
+		width: 100%
+		height: 100%
+		+transform(translateY(-50%))
+		text-align: center
+		padding: 50px
+		line-height: 0
 
-    a
-      position: relative
-      font-size: 1.1rem
-      letter-spacing: 0.1rem
-      text-transform: uppercase
-      line-height: 1
-      padding: 2px 0
-      text-decoration: none
-      color: white
-      +bp('large')
-        +transition(none, 0.75s)
-        font-size: 0.8rem
-        line-height: $header-height
-        padding: 0 0
-        &:after
-          display: none
-      &:after
-        position: absolute
-        bottom: 0
-        left: 0
-        content: ''
-        background-color: white
-        height: 2px
-        width: 100%
-      +fontheadline
-      +transition(all, 0.75s)
-      &:hover
-          color: white
-          background-color: black
+		span
+			display: block
+			position: relative
+			margin-bottom: 30px
+			+noselect()
+		table
+			width: 100%
+			height: 100%
+		tr
+
+		td
+			margin: 0
+			padding: 0
+			width: +unit(1,6)
+			background-color: #debad2
+			border: 4px solid white
+			overflow: hidden
+			&:hover
+				background-color: white		
+		a
+			+fontbold
+			cursor: pointer
+			font-size: 1.5rem
+			+bp(large)
+				font-size: 2.0rem
+			line-height: 100%
+			text-decoration: none
+			color: white
+			display: block
+			+noselect
+			+transition(all, 0.75s)
+			&:hover
+					color: #debad2

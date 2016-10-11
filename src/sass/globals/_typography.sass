@@ -1,12 +1,17 @@
 @mixin fontcopy()
-	font-family: "Arial"
+	font-family: 'Montserrat', sans-serif
 	font-style: normal
 	font-weight: 400
 
-@mixin fontheadline()
-	font-family: "Arial"
+@mixin fontbold()
+	font-family: 'Montserrat', sans-serif
 	font-style: normal
 	font-weight: 800
+
+@mixin fontheadline()
+	font-family: 'Playfair Display', serif
+	font-style: normal
+	font-weight: 400
 
 body
 	background-color: $color-background
@@ -34,13 +39,6 @@ h6
 	font-weight: inherit
 	line-height: inherit
 	line-height: ms(1.7)
-	+fontcopy()
-	text-transform: uppercase
-	letter-spacing: 0.1em
-
-h2, h3
-	text-transform: uppercase
-	letter-spacing: 0.1em
 
 ul,
 ol

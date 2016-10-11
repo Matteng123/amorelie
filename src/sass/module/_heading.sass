@@ -1,0 +1,22 @@
+.Heading
+	h1
+		+fontheadline
+		font-size: 2.4em
+		text-align: center
+		line-height: 1em
+
+		&:after
+			content: ''
+			height: 20px
+			display: block
+			width: 30px
+			position: relative
+			border-bottom: 1px solid #000
+			left: 50%
+			margin-left: -15px
+	&--small
+		h1
+			text-align: left
+			&:after
+				left: 0%
+				margin-left: 0px

@@ -22831,7 +22831,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+			value: true
 	});
 	
 	var _underscore = __webpack_require__(3);
@@ -22860,201 +22860,201 @@
 	
 	var MainView = _ampersandView2.default.extend({
 	
-	    /* Set Properties */
-	    props: {},
+			/* Set Properties */
+			props: {},
 	
-	    /* Bind basic Events, all link clicks, toggle Navigation, etc. */
-	    events: {
-	        'click a[href]': 'handleLinkClick',
-	        'click .Button--toggle': 'handleClickToggle',
-	        'click .Button--close': 'handleClickToggle'
-	    },
+			/* Bind basic Events, all link clicks, toggle Navigation, etc. */
+			events: {
+					'click a[href]': 'handleLinkClick',
+					'click .Button--toggle': 'handleClickToggle',
+					'click .Button--close': 'handleClickToggle'
+			},
 	
-	    /* Render Main View */
-	    render: function render() {
+			/* Render Main View */
+			render: function render() {
 	
-	        /* Set scope for callbacks */
-	        var self = this;
+					/* Set scope for callbacks */
+					var self = this;
 	
-	        /* Cache Elements */
-	        this.cacheElements({
-	            page: '#page',
-	            main: '#main',
-	            footer: '#footer',
-	            header: '#header',
-	            nav: '.nav',
-	            navmain: '.nav-main',
-	            switcher: '[data-hook=switcher]'
-	        });
+					/* Cache Elements */
+					this.cacheElements({
+							page: '#page',
+							main: '#main',
+							footer: '#footer',
+							header: '#header',
+							nav: '.nav',
+							navmain: '.nav-main',
+							switcher: '[data-hook=switcher]'
+					});
 	
-	        // Init and configure our page switcher
-	        this.pageSwitcher = new _ampersandViewSwitcher2.default(this.queryByHook('switcher'), {
-	            waitForRemove: false,
-	            hide: function hide(oldView, cb) {
-	                // Set scope for callback of TweenMax
-	                var inSwitcher = this;
+					// Init and configure our page switcher
+					this.pageSwitcher = new _ampersandViewSwitcher2.default(this.queryByHook('switcher'), {
+							waitForRemove: false,
+							hide: function hide(oldView, cb) {
+									// Set scope for callback of TweenMax
+									var inSwitcher = this;
 	
-	                // Hide oldView if oldView exits
-	                if (oldView && oldView.el) {
-	                    oldView.hookBeforeHide();
-	                    TweenMax.to(oldView.el, 0.4, { opacity: 0, onComplete: function onComplete() {
-	                            // scroll to top
-	                            TweenMax.to(window, 0.3, { scrollTo: { y: 0 } });
-	                            // cb triggers the show function in ViewSwitcher
-	                            cb.apply(inSwitcher);
-	                        }, delay: 0.2 });
-	                }
-	            },
-	            show: function show(newView) {
-	                console.log("show");
-	                // Set Page Title
-	                document.title = _underscore2.default.result(newView.model, 'pageTitle');
+									// Hide oldView if oldView exits
+									if (oldView && oldView.el) {
+											oldView.hookBeforeHide();
+											TweenMax.to(oldView.el, 0.4, { opacity: 0, onComplete: function onComplete() {
+															// scroll to top
+															TweenMax.to(window, 0.3, { scrollTo: { y: 0 } });
+															// cb triggers the show function in ViewSwitcher
+															cb.apply(inSwitcher);
+													}, delay: 0.2 });
+									}
+							},
+							show: function show(newView) {
+									console.log("show");
+									// Set Page Title
+									document.title = _underscore2.default.result(newView.model, 'pageTitle');
 	
-	                // Set newView opacity to 0
-	                TweenMax.set(newView.el, { opacity: 0 });
+									// Set newView opacity to 0
+									TweenMax.set(newView.el, { opacity: 0 });
 	
-	                // Animate newView opacity to 1
-	                TweenMax.to(newView.el, 0.8, { opacity: 1, onComplete: function onComplete() {
-	                        // Scroll to paramter 'section'
-	                        self.scrollTo();
-	                    }, delay: 1.2 });
-	            }
-	        });
-	        return this;
-	    },
+									// Animate newView opacity to 1
+									TweenMax.to(newView.el, 0.8, { opacity: 1, onComplete: function onComplete() {
+													// Scroll to paramter 'section'
+													self.scrollTo();
+											}, delay: 1.2 });
+							}
+					});
+					return this;
+			},
 	
-	    /*
-	       Function for the inital Handling of the Page
-	     */
+			/*
+	  		Function for the inital Handling of the Page
+	  	*/
 	
-	    handleInitialView: function handleInitialView(view) {
+			handleInitialView: function handleInitialView(view) {
 	
-	        var self = this;
+					var self = this;
 	
-	        // Set child view as initial
-	        view.isInitial = true;
+					// Set child view as initial
+					view.isInitial = true;
 	
-	        // Set the el of the child view
-	        view.el = this.query('.view');
+					// Set the el of the child view
+					view.el = this.query('.view');
 	
-	        // Render child view
-	        view.render();
+					// Render child view
+					view.render();
 	
-	        // Set current view of page switcher (silent)
-	        this.pageSwitcher.current = view;
+					// Set current view of page switcher (silent)
+					this.pageSwitcher.current = view;
 	
-	        // Handle active stuff in navigation
-	        this.updateActiveNav();
+					// Handle active stuff in navigation
+					this.updateActiveNav();
 	
-	        // Scroll to paramter 'section'
-	        TweenMax.delayedCall(0.15, function () {
-	            self.handleUpdateView();
-	        });
-	    },
+					// Scroll to paramter 'section'
+					TweenMax.delayedCall(0.15, function () {
+							self.handleUpdateView();
+					});
+			},
 	
-	    /*
-	       Function for the Handling of a new Page loaded via Ajax
-	     */
+			/*
+	  		Function for the Handling of a new Page loaded via Ajax
+	  	*/
 	
-	    handleNewView: function handleNewView(view) {
+			handleNewView: function handleNewView(view) {
 	
-	        // TRACKING
-	        if (typeof ga != 'undefined') {
-	            ga('send', 'pageview', {
-	                'page': CM.App.router.history.location.pathname,
-	                'title': view.model.pageTitle
-	            });
-	        }
+					// TRACKING
+					if (typeof ga != 'undefined') {
+							ga('send', 'pageview', {
+									'page': CM.App.router.history.location.pathname,
+									'title': view.model.pageTitle
+							});
+					}
 	
-	        // SWICTH THE VIEW
-	        this.pageSwitcher.set(view);
+					// SWICTH THE VIEW
+					this.pageSwitcher.set(view);
 	
-	        // UPDATE PAG NAV
-	        this.updateActiveNav();
-	    },
+					// UPDATE PAG NAV
+					this.updateActiveNav();
+			},
 	
-	    /*
-	      Updates current View if something changes but no url
-	    */
-	    handleUpdateView: function handleUpdateView() {
-	        this.scrollTo();
-	    },
+			/*
+	  	Updates current View if something changes but no url
+	  */
+			handleUpdateView: function handleUpdateView() {
+					this.scrollTo();
+			},
 	
-	    /*
-	      Toggle functions for mobile or Desktop Navigation
-	    */
+			/*
+	  	Toggle functions for mobile or Desktop Navigation
+	  */
 	
-	    handleClickToggle: function handleClickToggle(e) {
+			handleClickToggle: function handleClickToggle(e) {
+					e.preventDefault();
+					var body = document.body;
+					if (_ampersandDom2.default.hasClass(body, 'Navigation--show') || e == undefined) {
+							_ampersandDom2.default.removeClass(body, 'Navigation--show');
+					} else {
+							_ampersandDom2.default.addClass(body, 'Navigation--show');
+					}
+			},
 	
-	        var body = document.body;
-	        if (_ampersandDom2.default.hasClass(body, 'Navigation--show') || e == undefined) {
-	            _ampersandDom2.default.removeClass(body, 'Navigation--show');
-	        } else {
-	            _ampersandDom2.default.addClass(body, 'Navigation--show');
-	        }
-	    },
+			handleClickClose: function handleClickClose(e) {
+					var body = document.body;
+					_ampersandDom2.default.removeClass(body, 'Navigation--show');
+			},
 	
-	    handleClickClose: function handleClickClose(e) {
-	        var body = document.body;
-	        _ampersandDom2.default.removeClass(body, 'Navigation--show');
-	    },
+			handleClickOpen: function handleClickOpen(e) {
+					var body = document.body;
+					_ampersandDom2.default.addClass(body, 'Navigation--show');
+			},
 	
-	    handleClickOpen: function handleClickOpen(e) {
-	        var body = document.body;
-	        _ampersandDom2.default.addClass(body, 'Navigation--show');
-	    },
+			/*
+	  	Click Handler for each a[href]
+	  	*/
 	
-	    /*
-	     Click Handler for each a[href]
-	     */
+			handleLinkClick: function handleLinkClick(e) {
 	
-	    handleLinkClick: function handleLinkClick(e) {
+					var aTag = e.delegateTarget,
+					    self = this,
+					    path = aTag.getAttribute("href");
 	
-	        var aTag = e.delegateTarget,
-	            self = this,
-	            path = aTag.getAttribute("href");
+					var local = aTag.host === window.location.host;
+					if (local && !e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey && aTag.getAttribute("target") !== "_blank") {
+							// no link handling via Browser
+							e.preventDefault();
+							// Route
+							CM.App.navigate(path);
+							// Close Navigation
+							this.handleClickClose();
+					}
+			},
 	
-	        var local = aTag.host === window.location.host;
-	        if (local && !e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey && aTag.getAttribute("target") !== "_blank") {
-	            // no link handling via Browser
-	            e.preventDefault();
-	            // Route
-	            CM.App.navigate(path);
-	            // Close Navigation
-	            this.handleClickClose();
-	        }
-	    },
+			scrollTo: function scrollTo() {
+					if (CM.App._params != {} && CM.App._params.section != null) {
+							var id = this.query('#' + CM.App._params.section);
+							TweenMax.to(window, 1.2, { scrollTo: { x: 0, y: id.offsetTop }, overwrite: true, ease: Power2.easeOut });
+					}
+			},
 	
-	    scrollTo: function scrollTo() {
-	        if (CM.App._params != {} && CM.App._params.section != null) {
-	            var id = this.query('#' + CM.App._params.section);
-	            TweenMax.to(window, 1.2, { scrollTo: { x: 0, y: id.offsetTop }, overwrite: true, ease: Power2.easeOut });
-	        }
-	    },
+			updateActiveNav: function updateActiveNav() {
+					var path = window.location.pathname.slice(1),
+					    search = /(\w+\/)/g,
+					    match = search.exec(path),
+					    folder = path;
 	
-	    updateActiveNav: function updateActiveNav() {
-	        var path = window.location.pathname.slice(1),
-	            search = /(\w+\/)/g,
-	            match = search.exec(path),
-	            folder = path;
+					if (match != null) folder = match[0];
+					this.queryAll('.Navigation a[href]').forEach(function (aTag) {
 	
-	        if (match != null) folder = match[0];
-	        this.queryAll('.Navigation a[href]').forEach(function (aTag) {
+							var aPath = aTag.pathname.slice(1),
+							    parent = aTag.parentNode.className.indexOf('sub') != -1 ? aTag.parentNode.parentNode.parentNode : aTag.parentNode;
 	
-	            var aPath = aTag.pathname.slice(1),
-	                parent = aTag.parentNode.className.indexOf('sub') != -1 ? aTag.parentNode.parentNode.parentNode : aTag.parentNode;
-	
-	            if (folder.length >= 1 && aPath.indexOf(folder) === 0) {
-	                _ampersandDom2.default.addClass(parent, 'active');
-	            } else {
-	                if (aPath == path) {
-	                    _ampersandDom2.default.addClass(parent, 'active');
-	                } else {
-	                    _ampersandDom2.default.removeClass(parent, 'active');
-	                }
-	            }
-	        });
-	    }
+							if (folder.length >= 1 && aPath.indexOf(folder) === 0) {
+									_ampersandDom2.default.addClass(parent, 'active');
+							} else {
+									if (aPath == path) {
+											_ampersandDom2.default.addClass(parent, 'active');
+									} else {
+											_ampersandDom2.default.removeClass(parent, 'active');
+									}
+							}
+					});
+			}
 	
 	}); /*global me, app*/
 	exports.default = MainView;
