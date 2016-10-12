@@ -7,7 +7,23 @@
 	top: 0
 	left: 0
 	right: 0
-	height: $header-height
 	z-index: 9999
 	&-body
-		
+		position: relative
+		max-width: $max-size
+		padding: 0 $gap-size
+		margin: 0 auto
+		+bp(large)
+			padding: 0 $gap-size-large
+	&-logo
+		padding: $gap-size 0
+		font-size: 33px
+		+fontbold
+		font-weight: 800
+		text-transform: uppercase
+		line-height: 0.95em
+		color: #09d0ad
+		+bp(large)
+			padding: $gap-size-medium $gap-size
+		span
+			color: $color-navigation
