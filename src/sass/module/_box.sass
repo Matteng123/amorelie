@@ -1,42 +1,76 @@
 .Box
-	display: inline-block
-	background-color: #f2f2f2
-	float: left
 	position: relative
+	background-color: #ffffff
+	+bp(medium)
+		display: inline-block
+		float: left
 	&--right
-		float: right
+		+bp(large)
+			float: right
 	&--single
 		width: +unit(12)
-		padding-bottom: +unit(6)
+		// padding-bottom: +unit(6)
 		+bp(medium)
+			width: +unit(12)
+			padding-bottom: +unit(8)
+		+bp(large)
 			width: +unit(6)
-			padding-bottom: +unit(6)
+			padding-bottom: +unit(7)
 	&--double
 		width: +unit(12)
-		padding-bottom: +unit(6)
+		// padding-bottom: +unit(6)
 		+bp(medium)
+			width: +unit(12)
+			padding-bottom: +unit(6)
+		+bp(large)
 			width: +unit(6)
-			padding-bottom: +unit(3)
-		opacity: 0.9
+			padding-bottom: +unit(4)
 	&--tiny
 		width: +unit(12)
-		padding-bottom: +unit(6)
+		// padding-bottom: +unit(6)
 		+bp(medium)
+			width: +unit(6)
+			padding-bottom: +unit(4)
+		+bp(large)
 			width: +unit(3)
 			padding-bottom: +unit(3)
-		opacity: 0.95
 	&-body
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 0
-		top: 0
-	&-bottom
-		position: absolute
-		bottom: 10px
-		left: 50px
-		right: 50px
 
+		+bp(medium)
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			top: 0
+	&-bottom
+		+bp(medium)
+			position: absolute
+			bottom: 10px
+			left: 50px
+			right: 50px
+	&-right
+		+bp(medium)
+			position: absolute
+			top: 50%
+			+transform(translateY(-50%))
+			left: 50%
+			right: 10px
+	&--bg-lightrosa
+		background-color: $color-bg-lightrosa
+	&--bg-lightpink
+		background-color: $color-bg-lightpink
+	&--bg-greyblue
+		background-color: $color-bg-greyblue
+	&--bg-lightgrey
+		background-color: $color-bg-lightgrey
+	&--bg-rosa
+		background-color: $color-bg-rosa
+	&--bg-grey
+		background-color: $color-bg-grey
+	&--bg-middlegrey
+		background-color: $color-bg-middlegrey
+	&--bg-green
+		background-color: $color-bg-green
 
 	.Fb
 		position: absolute
@@ -44,8 +78,45 @@
 		top: 0
 		height: 70px
 		width: 70px
-		background-color: rgba(0,0,0,0.1)
+		color: white
 		text-align: center
+		overflow: hidden
+		z-index: 999
+		cursor: pointer
+		+box-shadow(0,0,0px, rgba(0,0,0,.4))
+		+transition(all, 0.35s)
+		div
+			position: absolute
+			display: block
+			height: 70px
+			width: 70px
+
+			&:first-child
+				background-color: rgba(0,0,0,0.25)
+				z-index: 1
+				+transform(translateX(0%))
+			&:last-child
+				overflow: hidden
+				top: 0px
+				left: 0px
+				width: 70px
+				height: 70px
+				background-color: #09d0ad
+				+transform(translateX(-100%))
+				>div
+					width: 70px
+					height: 70px
+			+transition(all, 0.35s)
+		&:hover
+			+box-shadow(0,0,15px, rgba(0,0,0,.4))
+			div:first-child
+				+transform(translateX(100%))
+			div:last-child
+				+transform(translateX(0%))
+				top: 0px
+				width: 70px
+				height: 70px
+				z-index: 99
 		span
 			display: block
 			padding: 0

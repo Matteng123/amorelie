@@ -1,0 +1,57 @@
+.Outro
+	padding-bottom: $gap-size
+	+bp(large)
+		padding-bottom: $gap-size-large
+	&-body
+		@extend .Section-body
+		padding: 0 $gap-size
+		h1
+			+fontheadline
+			text-align: center
+			line-height: 1.1em
+			font-size: 1.8em
+			+bp(medium)
+				font-size: 2.4em
+			&:after
+				content: ''
+				height: 20px
+				display: block
+				width: 30px
+				position: relative
+				border-bottom: 1px solid #000
+				left: 50%
+				margin-left: -15px
+		p
+			margin-left: auto
+			margin-right: auto
+			max-width: 90%
+			text-align: center
+			font-size: 0.75em
+			+bp(medium)
+				font-size: 1em
+		+bp(large)
+			padding: 0 $gap-size-large
+		> div
+			background-color: $color-highlight
+			+clearfix
+			> div
+				position: relative
+				img
+					width: 90%
+					padding-left: 10%
+				+bp(large)
+					float: left
+					width: +unit(6)
+					padding-bottom: +unit(6)
+					img
+						position: absolute
+						top: 50%
+						+transform(translateY(-50%))
+					&:last-child
+						>div
+							position: absolute
+							width: 90%
+							left: 5%
+							position: absolute
+							top: 50%
+							+transform(translateY(-50%))
