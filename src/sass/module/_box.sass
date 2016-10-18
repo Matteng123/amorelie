@@ -1,6 +1,8 @@
 .Box
 	position: relative
 	background-color: #ffffff
+	+transform(perspective( 1000px ))
+	backface-visibility: hidden
 	+bp(medium)
 		display: inline-block
 		float: left
@@ -27,12 +29,14 @@
 		width: +unit(12)
 		padding-top: +unit(3)
 		+bp(medium)
+			padding-top: 0
 			width: +unit(6)
 			padding-bottom: +unit(4)
 		+bp(large)
 			width: +unit(3)
 			padding-bottom: +unit(3)
 	&-body
+
 		+bp(medium)
 			position: absolute
 			left: 0

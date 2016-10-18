@@ -1,6 +1,8 @@
 import PageView from './base';
+import ScrollMagic from '../features/scrollmagic/scrollmagic.js';
 
-let Content = PageView.extend({
+let SMContent = PageView.extend(ScrollMagic);
+let Content = SMContent.extend({
 
 	props:{
 		isInitial: ['boolean', true, false],
@@ -17,7 +19,13 @@ let Content = PageView.extend({
 
 	hookInRender: function () {
 		var self = this;
-		this.initResponsimg();
+		if(this.isInitial) {
+			self._smTweenElements();
+		} else {
+			setTimeout(function (){
+				self._smTweenElements();
+			}, 250)
+		}
 	}
 
 });
