@@ -21,14 +21,17 @@
 				border-color: white
 	&--double
 		h1
-			text-align: left
-			&:after
-				left: 0%
-				margin-left: 0px
+			+bp(medium)
+				text-align: left
+				&:after
+					left: 0%
+					margin-left: 0px
 	&--small
 		h1
-			text-align: left
-			font-size: 1.5em
-			&:after
-				left: 0%
-				margin-left: 0px
+			font-size: 1.7em
+			+bp(medium)
+				text-align: left
+				font-size: 1.5em
+				&:after
+					left: 0%
+					margin-left: 0px
