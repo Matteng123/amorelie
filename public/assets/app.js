@@ -5878,7 +5878,9 @@
 			isScrollTop: ['boolean', true, false]
 		},
 	
-		events: {},
+		events: {
+			'mouseover #fact25': 'handleOver25'
+		},
 	
 		hookBeforeHide: function hookBeforeHide() {},
 	
@@ -5891,6 +5893,13 @@
 					self._smTweenElements();
 				}, 250);
 			}
+		},
+	
+		handleOver25: function handleOver25() {
+			console.log("handleOver25");
+			TweenMax.to('#penisarrow', 0.7, { rotation: -360, transformOrigin: "center center", onComplete: function onComplete() {
+					TweenMax.set('#penisarrow', { rotation: 0 });
+				} });
 		}
 	
 	});
@@ -18891,26 +18900,47 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var smLayer = {
-			_smTweenElements: function _smTweenElements() {
-					console.log("_smTweenElements");
-					var animateController = new _ScrollMagic2.default.Controller({
-							globalSceneOptions: {
-									offset: 200,
-									triggerHook: "onEnter"
-							}
-					});
-	
-					var dir = 1;
-					for (var i = 1; i < 37; i++) {
-							if (document.querySelectorAll("#fact" + i).length) {
-									var elements = Array.from(document.querySelectorAll(".animate" + i));
-									var tween = TweenMax.staggerFromTo(elements, 1.1, { y: 0, z: 0, rotationX: -90, transformOrigin: "center top", opacity: 0 }, { y: 0, z: 0, rotationX: 0, opacity: 1, ease: Ease.easeInOut }, 0.25);
-									var scene = new _ScrollMagic2.default.Scene({ triggerElement: "#fact" + i }).setTween(tween)
-									// .addIndicators({name: "scene"+i})
-									.addTo(animateController);
-							};
-					}
+		_smTweenElements: function _smTweenElements() {
+			var animateController = new _ScrollMagic2.default.Controller({
+				globalSceneOptions: {
+					offset: 200,
+					triggerHook: "onEnter"
+				}
+			});
+			var calid = [];
+			for (var ci = 1; ci < 13; ci++) {
+				calid.push(document.querySelector("#calender-" + ci));
 			}
+			var dir = 1;
+			for (var i = 1; i < 37; i++) {
+				if (document.querySelectorAll("#fact" + i).length) {
+					var elements = document.querySelectorAll(".animate" + i);
+					var start = null;
+					if (i == 1) {
+						start = function start() {
+							TweenMax.fromTo('#vibrator', 0.1, { rotation: -0.5 }, { rotation: 0.5, yoyo: true, repeat: 100 });
+						};
+					} else if (i == 17) {
+						start = function start() {
+							TweenMax.staggerFromTo(calid, 0.75, { opacity: 0, scale: 1.1, y: -1 * 15 }, { opacity: 1, y: 0, scale: 1, delay: 1.5, overwrite: true }, 0.5);
+						};
+					} else if (i == 21) {
+						start = function start() {
+							TweenMax.fromTo('#glocke-1', 0.1, { rotation: -4 }, { rotation: 4, transformOrigin: "right bottom", yoyo: true, repeat: 100, onComplete: function onComplete() {
+									TweenMax.to('#glocke-1', 0.1, { rotation: 0, transformOrigin: "right bottom" });
+								} });
+							TweenMax.fromTo('#glocke-2', 0.1, { rotation: -4 }, { rotation: 4, transformOrigin: "left bottom", yoyo: true, repeat: 100, onComplete: function onComplete() {
+									TweenMax.to('#glocke-2', 0.1, { rotation: 0, transformOrigin: "left bottom" });
+								} });
+						};
+					}
+					var tween = TweenMax.staggerFromTo(elements, 1.1, { y: 0, z: 0, rotationX: -90, transformOrigin: "center top", opacity: 0 }, { y: 0, z: 0, rotationX: 0, opacity: 1, ease: Ease.easeInOut, onStart: start }, 0.25);
+					var scene = new _ScrollMagic2.default.Scene({ triggerElement: "#fact" + i }).setTween(tween)
+					// .addIndicators({name: "scene"+i})
+					.addTo(animateController);
+				};
+			}
+		}
 	}; /*
 	   	ScrollMagic Tweens Layer
 	   */
@@ -36589,7 +36619,7 @@
 /* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license

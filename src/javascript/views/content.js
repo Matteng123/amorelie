@@ -10,7 +10,7 @@ let Content = SMContent.extend({
 	},
 
 	events: {
-
+		'mouseover #fact25': 'handleOver25',
 	},
 
 	hookBeforeHide: function(){
@@ -26,7 +26,14 @@ let Content = SMContent.extend({
 				self._smTweenElements();
 			}, 250)
 		}
+	},
+
+	handleOver25: function() {
+		console.log("handleOver25");
+		TweenMax.to('#penisarrow', 0.7, {rotation:-360, transformOrigin:"center center", onComplete:function(){TweenMax.set('#penisarrow', {rotation:0}) }});
+
 	}
+
 
 });
 

@@ -6,11 +6,16 @@
 		top: 0px
 		z-index: 9999
 		+transform(scale(1))
-		+bp(large)
-			right: $gap-size-large - 10px
+
+		+bp(medium)
 			width: 500px
 			height: 500px
 			min-height: 500px
+			right: $gap-size
+			top: $gap-size
+		+bp(large)
+
+			right: $gap-size-large - 10px
 
 .Navigation
 	position: absolute
