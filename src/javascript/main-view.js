@@ -58,7 +58,6 @@ var MainView = View.extend({
 								}
 						},
 						show: function (newView) {
-								console.log("show");
 								// Set Page Title
 								document.title = _.result(newView.model, 'pageTitle');
 
