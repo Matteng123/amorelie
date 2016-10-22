@@ -1,0 +1,53 @@
+#fact18
+	.Figure
+		&--animation
+			width: 90%
+			top: 28%
+			+bp(medium)
+				top: 42%
+			+bp(large)
+				top: 42%
+			+bp(huge)
+				top: 50%
+			span
+				color: black
+				&.headline
+					display: block
+					font-size: 15px
+					text-align: center
+					line-height: 1
+					max-width: 250px
+					margin: 0 auto
+					+bp(medium)
+						font-size: 15px
+					+bp(large)
+						font-size: 12px
+					+bp(huge)
+						font-size: 16px
+				&.counter
+					+fontheadline
+					display: block
+					margin-bottom: 20px
+					font-size: 80px
+					line-height: 80px
+					height: 80px
+					text-align: center
+					span
+						color: $color_navigation_bg
+						position: absolute
+						left: 0
+						right: 0
+						width: 100%
+					+bp(medium)
+						font-size: 180px
+						line-height: 180px
+						height: 190px
+					+bp(large)
+						font-size: 140px
+						line-height: 140px
+						height: 150px
+					+bp(huge)
+						margin-bottom: 20px
+						font-size: 130px
+						line-height: 85px
+						height: 85px

@@ -1,0 +1,45 @@
+#fact5
+	.Figure
+		&--animation
+			width: 90%
+			top: 30%
+			+bp(medium)
+				top: 54%
+			+bp(large)
+				top: 70%
+			+bp(huge)
+				top: 50%
+			span
+				color: black
+				&.headline
+					display: block
+					font-size: 15px
+					text-align: center
+					line-height: 1
+					+bp(medium)
+						font-size: 15px
+					+bp(large)
+						font-size: 12px
+					+bp(huge)
+						font-size: 16px
+				&.counter
+					margin-top: 20px
+					font-size: 80px
+					line-height: 55px
+					text-align: center
+					span
+						position: absolute
+						left: 0
+						right: 0
+						width: 100%
+					+bp(medium)
+						font-size: 150px
+						line-height: 105px
+					+bp(large)
+						margin-top: 10px
+						font-size: 90px
+						line-height: 60px
+					+bp(huge)
+						margin-top: 20px
+						font-size: 130px
+						line-height: 85px

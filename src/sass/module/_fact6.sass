@@ -1,0 +1,81 @@
+#fact6
+	.Figure
+		&--animation
+			top: 28%
+			left: 54%
+			width: 78%
+			+bp(smaller)
+				top: 30%
+				width: 225px
+			+bp(medium)
+				top: 40%
+				width: 400px
+			+bp(large)
+				top: 40%
+				width: 250px
+			+bp(huge)
+				top: 40%
+				width: 375px
+			span
+				&.headline
+					display: block
+					font-size: 20px
+					line-height: 1
+					+bp(medium)
+						font-size: 38px
+					+bp(large)
+						font-size: 22px
+					+bp(huge)
+						font-size: 36px
+					+bp(hugest)
+						font-size: 40px
+				&.counter
+					margin-top: 20px
+					font-size: 140px
+					line-height: 85px
+					+bp(medium)
+						font-size: 240px
+						line-height: 165px
+					+bp(large)
+						font-size: 170px
+						line-height: 125px
+					+bp(huge)
+						font-size: 240px
+						line-height: 165px
+					ul
+						position: relative
+						padding: 0
+						margin: 0
+						float: left
+						font-weight: 800
+						width: 80px
+						height: 85px
+						+bp(medium)
+							width: 135px
+							height: 165px
+						+bp(large)
+							width: 90px
+							height: 125px
+						+bp(huge)
+							width: 135px
+							height: 165px
+						// overflow: hidden
+						&.third
+							width: 54px
+							+bp(medium)
+								width: 90px
+							+bp(large)
+								width: 60px
+							+bp(huge)
+								width: 90px
+							li
+								// +transform(translateY(0%))
+								opacity: 1
+						li
+							position: absolute
+							right: 0
+							top: 0%
+							bottom: 0%
+							opacity: 0
+							text-align: right
+							// +transform(translateY(100%))

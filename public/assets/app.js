@@ -5875,7 +5875,9 @@
 	
 		props: {
 			isInitial: ['boolean', true, false],
-			isScrollTop: ['boolean', true, false]
+			isScrollTop: ['boolean', true, false],
+			counter5Val: ['number', true, 0],
+			counter18Val: ['number', true, 0]
 		},
 	
 		events: {
@@ -5887,6 +5889,12 @@
 	
 		hookInRender: function hookInRender() {
 			var self = this;
+	
+			this.cacheElements({
+				counter5: '.counter--5',
+				counter18: '.counter--18'
+			});
+	
 			if (this.isInitial) {
 				self._smTweenElements();
 			} else {
@@ -5894,8 +5902,50 @@
 					self._smTweenElements();
 				}, 250);
 			}
+			this.start5();
+			this.start18();
 		},
 	
+		start5: function start5() {
+			this.generate5(this);
+		},
+		generate5: function generate5(scope) {
+			var newElement = document.createElement('span');
+			newElement.innerHTML = scope.counter5Val;
+			scope.counter5Val++;
+			TweenMax.set(newElement, { opacity: 0 });
+			scope.counter5.appendChild(newElement);
+			TweenMax.to(newElement, 0.05, { opacity: 1, onStart: function onStart() {
+					if (this.target.previousElementSibling != null) {
+						TweenMax.to(this.target.previousElementSibling, 0.2, { opacity: 0, overwrite: true, onComplete: function onComplete() {
+								scope.counter5.removeChild(this.target);
+							} });
+					}
+				} });
+			TweenMax.delayedCall(0.1, function () {
+				scope.generate5(scope);
+			});
+		},
+		start18: function start18() {
+			this.generate18(this);
+		},
+		generate18: function generate18(scope) {
+			var newElement = document.createElement('span');
+			newElement.innerHTML = scope.counter18Val;
+			scope.counter18Val = scope.counter18Val + 7;
+			TweenMax.set(newElement, { opacity: 0 });
+			scope.counter18.appendChild(newElement);
+			TweenMax.to(newElement, 0.05, { opacity: 1, onStart: function onStart() {
+					if (this.target.previousElementSibling != null) {
+						TweenMax.to(this.target.previousElementSibling, 0.2, { opacity: 0, overwrite: true, onComplete: function onComplete() {
+								scope.counter18.removeChild(this.target);
+							} });
+					}
+				} });
+			TweenMax.delayedCall(1, function () {
+				scope.generate18(scope);
+			});
+		},
 		handleOver25: function handleOver25() {
 			TweenMax.to('#penisarrow', 0.7, { rotation: -360, transformOrigin: 'center center', onComplete: function onComplete() {
 					TweenMax.set('#penisarrow', { rotation: 0 });
@@ -5904,7 +5954,8 @@
 		},
 	
 		handleOver1: function handleOver1() {
-			TweenMax.fromTo('#vibrator', 0.1, { rotation: -0.5 }, { rotation: 0.5, yoyo: true, repeat: 100 });
+			TweenMax.fromTo('#klammer', 0.05, { rotation: -1 }, { rotation: 1, yoyo: true, repeat: 100, transformOrigin: 'center bottom' });
+			TweenMax.fromTo('#vibrator', 0.05, { rotation: -0.5 }, { rotation: 0.5, yoyo: true, repeat: 100, transformOrigin: 'center top' });
 		}
 	
 	});
@@ -18906,6 +18957,7 @@
 	
 	var smLayer = {
 		_smTweenElements: function _smTweenElements() {
+			var self = this;
 			var animateController = new _ScrollMagic2.default.Controller({
 				globalSceneOptions: {
 					offset: 200,
@@ -18917,13 +18969,32 @@
 				calid.push(document.querySelector("#calender-" + ci));
 			}
 			var dir = 1;
+			TweenMax.set('.counter--6 ul.first li', { opacity: 0, overwrite: true });
+			TweenMax.set('.counter--6 ul.second li', { opacity: 0, overwrite: true });
 			for (var i = 1; i < 37; i++) {
 				if (document.querySelectorAll("#fact" + i).length) {
 					var elements = document.querySelectorAll(".animate" + i);
 					var start = null;
+	
 					if (i == 1) {
 						start = function start() {
-							TweenMax.fromTo('#vibrator', 0.1, { rotation: -0.5 }, { rotation: 0.5, yoyo: true, repeat: 100 });
+							TweenMax.fromTo('#klammer', 0.05, { rotation: -1 }, { rotation: 1, yoyo: true, repeat: 100, transformOrigin: 'center bottom' });
+							TweenMax.fromTo('#vibrator', 0.05, { rotation: -0.5 }, { rotation: 0.5, yoyo: true, repeat: 100, transformOrigin: 'center top' });
+						};
+					} else if (i == 6) {
+						start = function start() {
+							TweenMax.set('.counter--6 ul.first li', { opacity: 0, overwrite: true });
+							TweenMax.set('.counter--6 ul.second li', { opacity: 0, overwrite: true });
+							TweenMax.staggerTo('.counter--6 ul.first li', 0.5, { opacity: 1, onStart: function onStart() {
+									if (this.target.previousElementSibling != null) {
+										TweenMax.to(this.target.previousElementSibling, 0.5, { opacity: 0, overwrite: true });
+									}
+								} }, 1);
+							TweenMax.staggerTo('.counter--6 ul.second li', 0.5, { opacity: 1, onStart: function onStart() {
+									if (this.target.previousElementSibling != null) {
+										TweenMax.to(this.target.previousElementSibling, 0.5, { opacity: 0, overwrite: true });
+									}
+								} }, 0.1);
 						};
 					} else if (i == 17) {
 						start = function start() {
@@ -18939,7 +19010,15 @@
 								} });
 						};
 					}
-					var tween = TweenMax.staggerFromTo(elements, 1.1, { y: 0, z: 0, rotationX: -90, transformOrigin: "center top", opacity: 0 }, { y: 0, z: 0, rotationX: 0, opacity: 1, ease: Ease.easeInOut, onStart: start }, 0.25);
+					var rand = Math.random();
+					var tween = null;
+					if (rand < 0.5) {
+						tween = TweenMax.staggerFromTo(elements, 1.1, { y: 0, z: 0, rotationX: -90, transformOrigin: "center top", opacity: 0 }, { y: 0, z: 0, rotationX: 0, opacity: 1, ease: Ease.easeInOut, onStart: start }, 0.25);
+					} else if (rand >= 0.5 && rand < 0.75) {
+						tween = TweenMax.staggerFromTo(elements, 1.1, { y: 0, z: 0, rotationY: 90, transformOrigin: "left center", opacity: 0 }, { y: 0, z: 0, rotationY: 0, opacity: 1, ease: Ease.easeInOut, onStart: start }, 0.25);
+					} else {
+						tween = TweenMax.staggerFromTo(elements, 1.1, { y: 0, z: 0, rotationY: -90, transformOrigin: "right center", opacity: 0 }, { y: 0, z: 0, rotationY: 0, opacity: 1, ease: Ease.easeInOut, onStart: start }, 0.25);
+					}
 					var scene = new _ScrollMagic2.default.Scene({ triggerElement: "#fact" + i }).setTween(tween)
 					// .addIndicators({name: "scene"+i})
 					.addTo(animateController);
@@ -36624,7 +36703,7 @@
 /* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
