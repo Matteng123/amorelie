@@ -11,6 +11,7 @@ let Content = SMContent.extend({
 
 	events: {
 		'mouseover #fact25': 'handleOver25',
+		'mouseover #fact1': 'handleOver1'
 	},
 
 	hookBeforeHide: function(){
@@ -28,8 +29,16 @@ let Content = SMContent.extend({
 		}
 	},
 
-	handleOver25: function() {
-		TweenMax.to('#penisarrow', 0.7, {rotation:-360, transformOrigin:"center center", onComplete:function(){TweenMax.set('#penisarrow', {rotation:0}) }});
+
+	handleOver25: function(){
+		TweenMax.to('#penisarrow', 0.7, {rotation:-360, transformOrigin:'center center', onComplete:function(){
+			TweenMax.set('#penisarrow', {rotation:0})
+			}
+		});
+	},
+
+	handleOver1: function() {
+		TweenMax.fromTo('#vibrator', 0.1, {rotation:-0.5}, {rotation:0.5, yoyo:true, repeat:100});
 	}
 
 

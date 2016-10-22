@@ -5879,7 +5879,8 @@
 		},
 	
 		events: {
-			'mouseover #fact25': 'handleOver25'
+			'mouseover #fact25': 'handleOver25',
+			'mouseover #fact1': 'handleOver1'
 		},
 	
 		hookBeforeHide: function hookBeforeHide() {},
@@ -5896,9 +5897,14 @@
 		},
 	
 		handleOver25: function handleOver25() {
-			TweenMax.to('#penisarrow', 0.7, { rotation: -360, transformOrigin: "center center", onComplete: function onComplete() {
+			TweenMax.to('#penisarrow', 0.7, { rotation: -360, transformOrigin: 'center center', onComplete: function onComplete() {
 					TweenMax.set('#penisarrow', { rotation: 0 });
-				} });
+				}
+			});
+		},
+	
+		handleOver1: function handleOver1() {
+			TweenMax.fromTo('#vibrator', 0.1, { rotation: -0.5 }, { rotation: 0.5, yoyo: true, repeat: 100 });
 		}
 	
 	});
