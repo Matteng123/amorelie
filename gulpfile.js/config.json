@@ -1,10 +1,10 @@
 {
   "root": {
-    "domain": "http://pwc-solid.de",
-    "appName": "PWC Solid",
+    "domain": "http://amorelie.de",
+    "appName": "Amorelie-36NackteTatsachen",
     "appDescription": "-",
     "src": "./src",
-    "dest": "./public",
+    "dest": "./public/",
     "assets": "/assets"
   },
 

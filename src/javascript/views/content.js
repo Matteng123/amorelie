@@ -8,13 +8,16 @@ let Content = SMContent.extend({
 		isInitial: ['boolean', true, false],
 		isScrollTop: ['boolean', true, false],
 		counter5Val: ['number', true, 0],
-		counter18Val: ['number', true, 0]
+		counter18Val: ['number', true, 0],
+		over30: ['boolean', true, false]
 	},
 
 	events: {
 		'mouseover #fact1': 'handleOver1',
 		'mouseover #fact22': 'handleOver22',
-		'mouseover #fact25': 'handleOver25'
+		'mouseover #fact25': 'handleOver25',
+		'mouseover #fact30': 'handleOver30',
+		'mouseover #fact31': 'handleOver31',
 
 	},
 
@@ -97,7 +100,35 @@ let Content = SMContent.extend({
 			TweenMax.set('#penisarrow', {rotation:0})
 			}
 		});
-	}
+	},
+
+	handleOver30: function(){
+		let self = this;
+		if(!this.over30){
+			this.over30 = true;
+			TweenMax.to('#glocke_1', 0.25, {rotation:15, transformOrigin:'center top', ease:Sine.easeOut, onComplete:function(){
+				TweenMax.to('#glocke_1', 0.25, {rotation:0, transformOrigin:'center top', ease:Sine.easeIn, onComplete:function(){
+					TweenMax.to('#glocke_2', 0.25, {rotation:-10, transformOrigin:'center top', ease:Sine.easeOut, onComplete:function(){
+						TweenMax.to('#glocke_2', 0.25, {rotation:0, transformOrigin:'center top', ease:Sine.easeIn, onComplete:function(){
+								TweenMax.to('#glocke_1', 0.25, {rotation:5, transformOrigin:'center top', ease:Sine.easeOut, onComplete:function(){
+									self.over30 = false;
+									TweenMax.to('#glocke_1', 0.25, {rotation:0, transformOrigin:'center top', ease:Sine.easeIn});
+								}});
+						}});
+					}});
+				}});
+			}
+			});
+		}
+		// TweenMax.to('#glocke_2', 0.25, {rotation:-2, transformOrigin:'center top', onComplete:function(){
+		// 	TweenMax.to('#glocke_2', 0.25, {rotation:2, transformOrigin:'center top'})
+		// 	}
+		// });
+	},
+	handleOver31: function() {
+		TweenMax.fromTo('#dildo_1', 0.05, {rotation:-0.25}, {rotation:0.25, yoyo:true, repeat:100, delay:0.025, transformOrigin:'center bottom'});
+		TweenMax.fromTo('#dildo_2', 0.05, {rotation:-0.25}, {rotation:0.25, yoyo:true, repeat:100, transformOrigin:'center bottom'});
+	},
 
 });
 

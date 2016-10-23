@@ -10,8 +10,8 @@ class Loader {
 
       let scope = this;
       head.ready(document, function() {
-          head.load(["/assets/app.css",
-                    "/assets/app.js"
+          head.load(["assets/app.css",
+                    "assets/app.js"
                   ], scope.startApplication);
       });
     }

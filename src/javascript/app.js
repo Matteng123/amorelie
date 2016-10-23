@@ -100,24 +100,7 @@ class App {
       }
     }
 
-    _sayHello () {
-      if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1)
-        {
-            var args = [
-                '\n %c %c ### CADMAN Webapp ' + this._version + '  - ♥♥♥ -  http://cadman.de/ %c - ♥♥♥ -  %c\n\n',
-                'background: #000; padding:15px 0;',
-                'color: #e400ff; background: #000; padding:15px 0px;',
-                'color: #e400ff; background: #000; padding:15px 0px;',
-                'color: #e400ff; background: #000; padding:15px 0px;'
-            ];
-
-            window.console.log.apply(console, args); //jshint ignore:line
-        }
-        else if (window.console)
-        {
-            window.console.log('CADMAN Webapp ' + this._version+ ' - // // // - http://cadman.de/'); //jshint ignore:line
-        }
-    }
+    _sayHello () { }
 
 };
 // Construct the APP in window

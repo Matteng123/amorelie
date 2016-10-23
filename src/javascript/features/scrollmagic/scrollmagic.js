@@ -61,6 +61,23 @@ let smLayer = {
 									}
 								}}, 0.1);
 							}
+						} else if(i == 31){
+							start = function(){
+								TweenMax.set('.counter--31 ul.first li', {opacity:0, overwrite:true});
+								TweenMax.set('.counter--31 ul.second li', {opacity:0, overwrite:true});
+								TweenMax.fromTo('#dildo_1', 0.05, {rotation:-0.25}, {rotation:0.25, yoyo:true, repeat:100, delay:0.025, transformOrigin:'center bottom'});
+								TweenMax.fromTo('#dildo_2', 0.05, {rotation:-0.25}, {rotation:0.25, yoyo:true, repeat:100, transformOrigin:'center bottom'});
+								TweenMax.staggerTo('.counter--31 ul.first li', 0.5, {opacity:1, onStart:function(){
+									if(this.target.previousElementSibling != null) {
+										TweenMax.to(this.target.previousElementSibling, 0.5, {opacity:0, overwrite:true})
+									}
+								}}, 1);
+								TweenMax.staggerTo('.counter--31 ul.second li', 0.5, {opacity:1, onStart:function(){
+									if(this.target.previousElementSibling != null) {
+										TweenMax.to(this.target.previousElementSibling, 0.5, {opacity:0, overwrite:true})
+									}
+								}}, 0.1);
+							}
 						} else if(i == 17){
 							start = function(){
 								TweenMax.staggerFromTo(calid, 0.75, {opacity:0, scale:1.1, y:-1*15}, {opacity:1, y:0, scale:1, delay:1.5, overwrite:true}, 0.5);
