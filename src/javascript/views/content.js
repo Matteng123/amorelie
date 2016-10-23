@@ -12,8 +12,10 @@ let Content = SMContent.extend({
 	},
 
 	events: {
-		'mouseover #fact25': 'handleOver25',
-		'mouseover #fact1': 'handleOver1'
+		'mouseover #fact1': 'handleOver1',
+		'mouseover #fact22': 'handleOver22',
+		'mouseover #fact25': 'handleOver25'
+
 	},
 
 	hookBeforeHide: function(){
@@ -79,18 +81,23 @@ let Content = SMContent.extend({
 			scope.generate18(scope);
 		})
 	},
+
+	handleOver1: function() {
+		TweenMax.fromTo('#klammer', 0.05, {rotation:-1}, {rotation:1, yoyo:true, repeat:100, transformOrigin:'center bottom'});
+		TweenMax.fromTo('#vibrator', 0.05, {rotation:-0.5}, {rotation:0.5, yoyo:true, repeat:100, transformOrigin:'center top'});
+	},
+
+	handleOver22: function(){
+		TweenMax.set('#kussmund', {scale:0.75});
+		TweenMax.to('#kussmund', 0.7, {scale:1, transformOrigin:'center center', ease:Bounce.easeOut});
+	},
+
 	handleOver25: function(){
 		TweenMax.to('#penisarrow', 0.7, {rotation:-360, transformOrigin:'center center', onComplete:function(){
 			TweenMax.set('#penisarrow', {rotation:0})
 			}
 		});
-	},
-
-	handleOver1: function() {
-		TweenMax.fromTo('#klammer', 0.05, {rotation:-1}, {rotation:1, yoyo:true, repeat:100, transformOrigin:'center bottom'});
-		TweenMax.fromTo('#vibrator', 0.05, {rotation:-0.5}, {rotation:0.5, yoyo:true, repeat:100, transformOrigin:'center top'});
 	}
-
 
 });
 

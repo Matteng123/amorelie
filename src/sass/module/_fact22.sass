@@ -1,0 +1,91 @@
+#fact22
+	.Figure
+		cursor: pointer
+		svg
+			width: 100%
+			z-index: 2
+		&--animation
+			top: 25%
+			left: 0%
+			width: 100%
+			z-index: 99
+			+transform(translateY(-50%))
+			+bp(smaller)
+				top: 27%
+				width: 100%
+			+bp(medium)
+				top: 50%
+				width: 50%
+			+bp(large)
+				top: 50%
+				width: 50%
+			+bp(huge)
+				top: 50%
+				width: 50%
+			span
+				+noselect()
+				text-align: center
+				display: block
+				&.headline,
+				&.subline
+					width: 100%
+					display: block
+					font-size: 20px
+					line-height: 1
+					+bp(medium)
+						font-size: 24px
+					+bp(large)
+						font-size: 19px
+					+bp(huge)
+						font-size: 20px
+				&.counter
+					margin-top: 20px
+					font-size: 90px
+					line-height: 45px
+					+bp(smaller)
+						font-size: 120px
+						line-height: 65px
+					+bp(medium)
+						font-size: 140px
+						line-height: 65px
+					+bp(large)
+						font-size: 90px
+						line-height: 35px
+					+bp(huge)
+						font-size: 140px
+						line-height: 80px
+					ul
+						position: relative
+						padding: 0
+						margin: 0
+						float: left
+						font-weight: 800
+						width: 50%
+						height: 65px
+						+bp(smaller)
+							height: 85px
+						+bp(medium)
+							width: 50%
+							height: 90px
+						+bp(large)
+							width: 50%
+							height: 55px
+						+bp(huge)
+							width: 50%
+							height: 100px
+						&:first-child
+							li
+								text-align: right
+								right: 0
+						&:last-child
+							li
+								right: inherit
+								left: 0
+								text-align: left
+						li
+							+noselect()
+							position: absolute
+							top: 0%
+							bottom: 0%
+							opacity: 0
+							// +transform(translateY(100%))
