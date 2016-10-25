@@ -7,7 +7,15 @@
 			span Share
 			span 9
 	.Box-body
-		.Figure.Figure--top
+		.Figure.Figure--top.Figure--extend
+			.Figure--input
+				div
+					span Dein Alter:
+					span
+						input(type="text" name="age" value="??" max="2")
+				div
+					span Deine Sexy-Time in Tagen:
+						input(type="number" name="time" value="00" readonly="readonly")
 			include ../_svg/amorelie_09.svg
 		.Box-bottom
 			.Heading

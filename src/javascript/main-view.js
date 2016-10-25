@@ -100,7 +100,7 @@ var MainView = View.extend({
 				this.updateActiveNav();
 
 				// Scroll to paramter 'section'
-				TweenMax.delayedCall(0.15, function(){ self.handleUpdateView() });
+				TweenMax.delayedCall(0.25, function(){ self.handleUpdateView() });
 		},
 
 		/*
@@ -170,21 +170,37 @@ var MainView = View.extend({
 			var aTag = e.delegateTarget,
 					self = this,
 					path = aTag.getAttribute("href");
+			var params = path.split("?")[1],
+					paramsA = [],
+					paramslist = params.split('&');
 
-				var local = aTag.host === window.location.host;
-				if (local && !e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey && aTag.getAttribute("target") !== "_blank") {
-						// no link handling via Browser
-						e.preventDefault();
-						// Route
-						CM.App.navigate(path);
-						// Close Navigation
-						this.handleClickClose();
+					for (let i = 0; i < paramslist.length; i++ ) {
+							let parampair = paramslist[i].split('=')
+							paramsA[parampair[0]] = parampair[1];
+					}
+				if (CM.App._params != {} && paramsA != {} && CM.App._params.section == paramsA.section){
+					e.preventDefault();
+					this.scrollTo();
+					// Close Navigation
+					this.handleClickClose();
+				} else {
+					var local = aTag.host === window.location.host;
+					if (local && !e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey && aTag.getAttribute("target") !== "_blank") {
+							// no link handling via Browser
+							e.preventDefault();
+							// Route
+							CM.App.navigate(path);
+							// Close Navigation
+							this.handleClickClose();
+					}
 				}
 		},
 
 		scrollTo: function(){
+				console.log("scrollTo");
 				if (CM.App._params != {} && CM.App._params.section != null){
 						var id = this.query('#'+CM.App._params.section);
+						console.log(id);
 						TweenMax.to(window, 1.2, {scrollTo:{x:0, y:id.offsetTop-150}, overwrite:true, ease:Power2.easeOut});
 				}
 		},

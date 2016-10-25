@@ -1,0 +1,92 @@
+#fact9
+	.Figure
+		&--input
+			width: 90%
+			top: 35%
+			+bp(smaller)
+				top: 40%
+			+bp(small)
+				top: 45%
+			+bp(medium)
+				width: 80%
+				top: 52%
+			+bp(large)
+				width: 100%
+				top: 45%
+			+bp(huge)
+				width: 90%
+				top: 54%
+			+clearfix
+			div
+				+fontbold
+				text-align: center
+				padding: 0
+				+bp(medium)
+					padding: 0 50px
+				+bp(large)
+					padding: 0 30px
+				span
+					display: block
+					text-transform: uppercase
+					font-size: 0.5em
+					+bp(medium)
+						font-size: 0.8em
+					+bp(large)
+						font-size: 0.7em
+						line-height: 1
+					input
+						padding: 0
+						text-align: center
+						background-color: transparent
+						border: none
+						border-bottom: 2px solid rgba(160,160,160,1)
+						box-shadow: none
+						color: rgba(50,50,50,1)
+						font-size: 8em
+						width: 80%
+						font-weight: 800
+						margin: 0
+						+bp(medium)
+							font-size: 12em
+							width: 100%
+						+bp(large)
+							font-size: 8em
+							width: 60%
+						+bp(larger)
+							font-size: 14em
+							width: 100%
+						+bp(hugest)
+							font-size: 20em
+							width: 100%
+						&:focus
+							border: none
+							box-shadow: none
+							background-color: transparent
+							border-bottom: 2px solid rgba(10,10,10,1)
+							box-shadow: none
+							outline: none
+				color: rgba(160,160,160,1)
+				float: left
+				width: +unit(6)
+				position: relative
+				&:first-child
+					&:after
+						+fontbold
+						font-size: 3em
+						+bp(medium)
+							font-size: 6em
+						+bp(large)
+							font-size: 4em
+						+bp(larger)
+							font-size: 7em
+						content: "="
+						position: absolute
+						right: 0
+						top: 50%
+						+transform(translateX(50%) translateY(-50%))
+				&:last-child
+					input
+						+noselect
+						border-bottom: 0
+						&:focus
+							border-bottom: 0

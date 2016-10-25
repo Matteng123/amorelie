@@ -14,10 +14,14 @@ let Content = SMContent.extend({
 
 	events: {
 		'mouseover #fact1': 'handleOver1',
+		'mouseover #fact21': 'handleOver21',
 		'mouseover #fact22': 'handleOver22',
 		'mouseover #fact25': 'handleOver25',
+		'mouseover #fact29': 'handleOver29',
 		'mouseover #fact30': 'handleOver30',
 		'mouseover #fact31': 'handleOver31',
+		'input #fact9 input[name="age"]': 'handleChange9',
+		'focus #fact9 input[name="age"]': 'handleFocus9'
 
 	},
 
@@ -30,7 +34,9 @@ let Content = SMContent.extend({
 
 		this.cacheElements({
 				counter5: '.counter--5',
-				counter18: '.counter--18'
+				counter18: '.counter--18',
+				input9: 'input[name="age"]',
+				output9: 'input[name="time"]'
 		});
 
 		if(this.isInitial) {
@@ -86,10 +92,17 @@ let Content = SMContent.extend({
 	},
 
 	handleOver1: function() {
-		TweenMax.fromTo('#klammer', 0.05, {rotation:-1}, {rotation:1, yoyo:true, repeat:100, transformOrigin:'center bottom'});
-		TweenMax.fromTo('#vibrator', 0.05, {rotation:-0.5}, {rotation:0.5, yoyo:true, repeat:100, transformOrigin:'center top'});
+		TweenMax.fromTo('#klammer', 0.05, {rotation:-1}, {rotation:1, yoyo:true, repeat:10, transformOrigin:'center bottom'});
+		TweenMax.fromTo('#vibrator', 0.05, {rotation:-0.5}, {rotation:0.5, yoyo:true, repeat:10, transformOrigin:'center top'});
 	},
-
+	handleOver21: function(){
+		TweenMax.fromTo('#glocke-1', 0.1, {rotation:-4}, {rotation:4, transformOrigin:"right bottom", yoyo:true, repeat:10, onComplete:function(){
+			TweenMax.to('#glocke-1', 0.1, {rotation:0, transformOrigin:"right bottom"});
+		}});
+		TweenMax.fromTo('#glocke-2', 0.1, {rotation:-4}, {rotation:4, transformOrigin:"left bottom", yoyo:true, repeat:10, onComplete:function(){
+			TweenMax.to('#glocke-2', 0.1, {rotation:0, transformOrigin:"left bottom"});
+		}});
+	},
 	handleOver22: function(){
 		TweenMax.set('#kussmund', {scale:0.75});
 		TweenMax.to('#kussmund', 0.7, {scale:1, transformOrigin:'center center', ease:Bounce.easeOut});
@@ -100,6 +113,14 @@ let Content = SMContent.extend({
 			TweenMax.set('#penisarrow', {rotation:0})
 			}
 		});
+	},
+
+	handleOver29: function(){
+		TweenMax.to('#Form_7', 0.7, {rotation:-360, transformOrigin:'center center', onComplete:function(){
+			TweenMax.set('#Form_7', {rotation:0})
+			}
+		});
+		TweenMax.fromTo('#Form_8', 0.25, {scale:1}, {scale:1.5, transformOrigin:'center center', yoyo:true, repeat:2 });
 	},
 
 	handleOver30: function(){
@@ -129,6 +150,30 @@ let Content = SMContent.extend({
 		TweenMax.fromTo('#dildo_1', 0.05, {rotation:-0.25}, {rotation:0.25, yoyo:true, repeat:100, delay:0.025, transformOrigin:'center bottom'});
 		TweenMax.fromTo('#dildo_2', 0.05, {rotation:-0.25}, {rotation:0.25, yoyo:true, repeat:100, transformOrigin:'center bottom'});
 	},
+
+	handleChange9: function(e){
+		TweenMax.set(this.output9, {opacity:0});
+		var targetAge = 71;
+		if(e.target.value >= targetAge) {
+			targetAge = targetAge+10
+		}
+		if(e.target.value >= targetAge) {
+			targetAge = 101;
+		}
+		this.output9.setAttribute("value", Math.round((targetAge-e.target.value)*0.45));
+		TweenMax.to('#largepointer', 0.5, {rotation:360, transformOrigin:'right bottom', onComplete:function(){
+			TweenMax.set('#largepointer', {rotation:0, transformOrigin:'right bottom'});
+		}});
+		TweenMax.fromTo('#heart1', 0.05, {rotation:-4}, {rotation:0, yoyo:true, repeat:50, transformOrigin:'center bottom'});
+		TweenMax.fromTo('#heart2', 0.05, {rotation:-4}, {rotation:0, yoyo:true, repeat:50, delay:0.025, transformOrigin:'center bottom'});
+		TweenMax.to(this.output9, 0.4, {opacity:1, overwrite:1});
+
+	},
+	handleFocus9: function(e){
+		if(e.target.getAttribute("value") == '??'){
+			e.target.setAttribute("value", "");
+		}
+	}
 
 });
 
