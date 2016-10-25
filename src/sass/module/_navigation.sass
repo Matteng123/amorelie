@@ -4,9 +4,11 @@
 		height: 400px
 		right: 0px
 		top: 0px
+		visibility: visible
 		z-index: 9999
 		+transform(scale(1))
-
+		nav
+			display: block
 		+bp(medium)
 			width: 500px
 			height: 500px
@@ -14,7 +16,6 @@
 			right: $gap-size
 			top: $gap-size
 		+bp(large)
-
 			right: $gap-size-large - 10px
 
 .Navigation
@@ -24,6 +25,7 @@
 	top: 0%
 	right: 0%
 	overflow: hidden
+	visibility: hidden
 	z-index: 0
 	background-color: $color-navigation-bg
 	+transform(scale(1.5))
@@ -38,6 +40,7 @@
 		text-align: center
 		padding: 50px
 		line-height: 0
+		display: none
 
 		span
 			display: block
