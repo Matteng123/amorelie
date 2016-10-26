@@ -19,26 +19,26 @@
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="//cdn.amorelie.de/skin/frontend/amorelie/default/ico/apple-touch-icon-120x120-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//cdn.amorelie.de/skin/frontend/amorelie/default/ico/apple-touch-icon-144x144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="//cdn.amorelie.de/skin/frontend/amorelie/default/ico/apple-touch-icon-152x152-precomposed.png">
-		<?php print_r($_POST); ?>
-		<meta property="og:url"                content="http://amorelie.matteng.de/nackte-tatsachen/?section=<?php echo $_POST['section'] ?>" />
+		<?php print_r($_GET); ?>
+		<meta property="og:url"                content="http://amorelie.matteng.de/nackte-tatsachen/?section=<?php echo $_GET['section'] ?>" />
 		<meta property="og:type"               content="article" />
-		<?php if($_POST['section'] == 'fact1') : ?>
+		<?php if($_GET['section'] == 'fact1') : ?>
 		<meta property="og:title"              content="In Socken verlocken" />
 		<meta property="og:description"        content="Hättest Du es gewusst: Wärme erhöht die Orgasmus-Wahrscheinlichkeit. Beim Sex sollten Männer und Frauen daher ruhig die Socken anlassen. Ob in Socken dann aber noch heißer Sex aufkommt, wurde nicht untersucht. Wir empfehlen: Netzstrümpfe!" />
 		<?php endif ?>
-		<?php if($_POST['section'] == 'fact2') : ?>
+		<?php if($_GET['section'] == 'fact2') : ?>
 		<meta property="og:description"        content="Strumpfband vs. Schrumpfband" />
 		<?php endif ?>
-		<?php if($_POST['section'] == 'fact3') : ?>
+		<?php if($_GET['section'] == 'fact3') : ?>
 		<meta property="og:description"        content="Kein Witz!" />
 		<?php endif ?>
-		<?php if($_POST['section'] == 'fact4') : ?>
+		<?php if($_GET['section'] == 'fact4') : ?>
 		<meta property="og:description"        content="Harte Tatsachen" />
 		<?php endif ?>
-		<?php if($_POST['section'] == 'fact5') : ?>
+		<?php if($_GET['section'] == 'fact5') : ?>
 		<meta property="og:description"        content="Gib Gummi!" />
 		<?php endif ?>
-		<?php if($_POST['section'] == 'fact6') : ?>
+		<?php if($_GET['section'] == 'fact6') : ?>
 		<meta property="og:description"        content="So hot right now" />
 		<?php endif ?>
 		<style>
