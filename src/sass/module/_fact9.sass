@@ -6,20 +6,22 @@
 			+bp(smaller)
 				top: 40%
 			+bp(small)
-				top: 45%
+				top: 55%
 			+bp(medium)
-				width: 80%
+				width: 100%
 				top: 52%
 			+bp(large)
 				width: 100%
-				top: 45%
-			+bp(huge)
-				width: 90%
-				top: 54%
+				top: 52%
+			+bp(huger)
+				top: 55%
 			+clearfix
 			div
 				+fontbold
 				text-align: center
+				float: left
+				width: +unit(6)
+				position: relative
 				padding: 0
 				+bp(medium)
 					padding: 0 50px
@@ -27,63 +29,81 @@
 					padding: 0 30px
 				span
 					display: block
-					text-transform: uppercase
-					font-size: 0.5em
-					+bp(medium)
-						font-size: 0.8em
-					+bp(large)
-						font-size: 0.7em
-						line-height: 1
-					input
-						padding: 0
-						text-align: center
-						background-color: transparent
-						border: none
-						border-bottom: 2px solid rgba(160,160,160,1)
-						box-shadow: none
-						color: rgba(50,50,50,1)
-						font-size: 8em
-						width: 80%
-						font-weight: 800
-						margin: 0
+					&.heading
+						color: rgba(160,160,160,1)
+						text-transform: uppercase
+						font-size: 0.5em
 						+bp(medium)
-							font-size: 12em
-							width: 100%
+							font-size: 0.8em
 						+bp(large)
-							font-size: 8em
-							width: 60%
-						+bp(larger)
-							font-size: 14em
-							width: 100%
-						+bp(hugest)
-							font-size: 20em
-							width: 100%
-						&:focus
-							border: none
-							box-shadow: none
+							font-size: 0.7em
+							line-height: 1
+					&.input
+						input
+							padding: 0
+							text-align: center
 							background-color: transparent
-							border-bottom: 2px solid rgba(10,10,10,1)
+							border: none
+							border-bottom: 2px solid rgba(160,160,160,1)
 							box-shadow: none
-							outline: none
-				color: rgba(160,160,160,1)
-				float: left
-				width: +unit(6)
-				position: relative
+							color: rgba(50,50,50,1)
+							font-size: 4em
+							width: 70%
+							font-weight: 800
+							margin: 0
+							letter-spacing: 0
+							+fontbold
+							height: 70px
+							+bp(smaller)
+								width: 80%
+								font-size: 5em
+								height: 80px
+							+bp(small)
+								width: 80%
+								font-size: 8em
+								height: 120px
+							+bp(medium)
+								font-size: 12em
+								width: 100%
+								height: 180px
+							+bp(large)
+								font-size: 7em
+								width: 90%
+								height: 120px
+							+bp(larger)
+								font-size: 8em
+								width: 100%
+								height: 120px
+							+bp(huger)
+								font-size: 13em
+								width: 100%
+								height: 190px
+							&:focus
+								border: none
+								box-shadow: none
+								background-color: transparent
+								border-bottom: 2px solid rgba(10,10,10,1)
+								box-shadow: none
+								outline: none
+
 				&:first-child
 					&:after
 						+fontbold
+						color: rgba(160,160,160,1)
+						content: "="
+						position: absolute
+						right: 0
+						top: 50%
+						+transform(translateX(50%) translateY(-50%))
 						font-size: 3em
 						+bp(medium)
 							font-size: 6em
 						+bp(large)
 							font-size: 4em
 						+bp(larger)
-							font-size: 7em
-						content: "="
-						position: absolute
-						right: 0
-						top: 50%
-						+transform(translateX(50%) translateY(-50%))
+							font-size: 5em
+						+bp(huger)
+							font-size: 6em
 				&:last-child
 					input
 						+noselect
