@@ -3,20 +3,6 @@ import _ from 'underscore';
 import Router from './router';
 import MainView from './main-view';
 
-// Responive Images
-import lsRias from './vendor/lazysizes-gh-pages/plugins/rias/ls.rias.min.js';
-import lazySizes from './vendor/lazysizes-gh-pages/lazysizes.min.js';
-
-window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.rias = window.lazySizesConfig.rias || {};
-window.lazySizesConfig.rias.widths = [340, 640, 940, 1200];
-window.lazySizesConfig.rias.widthmap = {
-    340: '/small/',
-    640: '/medium/',
-    940: '/large/',
-    1200: '/'
-};
-
 /* Class Defintion */
 class App {
 
