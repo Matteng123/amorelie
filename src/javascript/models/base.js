@@ -26,7 +26,7 @@ let Base = Model.extend({
                 'withCredentials': true
             },
             headers: {
-                'accept': 'application/html'
+                'accept': 'application/php'
             }
 
         };
