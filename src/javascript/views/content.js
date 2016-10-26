@@ -46,6 +46,7 @@ let Content = SMContent.extend({
 				self._smTweenElements();
 			}, 250)
 		}
+
 		this.start5();
 		this.start18();
 	},

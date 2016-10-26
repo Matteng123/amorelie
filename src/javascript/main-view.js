@@ -101,6 +101,10 @@ var MainView = View.extend({
 
 				// Scroll to paramter 'section'
 				TweenMax.delayedCall(0.25, function(){ self.handleUpdateView() });
+
+				setTimeout(function (){
+					dom.addClass(document.body, 'Fb--hide');
+				}, 2500);
 		},
 
 		/*
@@ -124,6 +128,10 @@ var MainView = View.extend({
 
 				// UPDATE PAG NAV
 				this.updateActiveNav();
+
+				setTimeout(function (){
+					dom.addClass(document.body, 'FB--hide');
+				}, 2500);
 
 		},
 
@@ -178,22 +186,21 @@ var MainView = View.extend({
 							let parampair = paramslist[i].split('=')
 							paramsA[parampair[0]] = parampair[1];
 					}
-				if (CM.App._params != {} && paramsA != {} && CM.App._params.section == paramsA.section){
-					e.preventDefault();
-					this.scrollTo();
-					// Close Navigation
-					this.handleClickClose();
-				} else {
+
 					var local = aTag.host === window.location.host;
 					if (local && !e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey && aTag.getAttribute("target") !== "_blank") {
 							// no link handling via Browser
 							e.preventDefault();
 							// Route
-							CM.App.navigate(path);
+							if (CM.App._params != {} && paramsA != {} && CM.App._params.section == paramsA.section){
+								this.scrollTo();
+							} else {
+								CM.App.navigate(path);
+							}
 							// Close Navigation
 							this.handleClickClose();
 					}
-				}
+				
 		},
 
 		scrollTo: function(){

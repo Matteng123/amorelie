@@ -1,11 +1,14 @@
 #fact25.Box.Box--single.Box--bg-lightgrey(class="animate25")
 	.Fb
-		div
-			span Fakt
-			span 25
-		div
-			span Share
-			span 25
+		a(href="https://www.facebook.com/sharer/sharer.php?u="+BaseURL+"/"+BaseVZ+"/?section=fact25")
+			div
+				span Fakt
+				span 25
+			div
+				span Share
+				span 25
+	.Fb--hint
+		img(src="assets/images/facebook-share.png")
 	.Box-body
 		.Figure.Figure--top
 			include ../_svg/amorelie_25.svg

@@ -1,3 +1,7 @@
+.Fb--hide
+	.Fb--hint
+		opacity: 0
+
 .Box
 	position: relative
 	background-color: #ffffff
@@ -107,6 +111,23 @@
 	&--bg-green
 		background-color: $color-bg-green
 
+	.Fb--hint
+		position: absolute
+		left: 60px
+		top: 0
+		height: 50px
+		width: 50px
+		z-index: 1999
+		+transition(opacity,1s)
+		+transform(translateY(-50%))
+		+bp(large)
+			height: 30px
+			width: 30px
+			left: 35px
+		+bp(larger)
+			left: 60px
+			height: 50px
+			width: 50px
 	.Fb
 		position: absolute
 		left: 0
@@ -126,6 +147,16 @@
 		cursor: pointer
 		+box-shadow(0,0,0px, rgba(0,0,0,.4))
 		+transition(all, 0.35s)
+		a
+			display: block
+			height: 70px
+			width: 70px
+			+bp(large)
+				height: 40px
+				width: 40px
+			+bp(larger)
+				height: 70px
+				width: 70px
 		div
 			position: absolute
 			display: block

@@ -2,10 +2,12 @@
 	letter-spacing: 0
 	max-width: $max-size
 	padding: 0 $gap-size
-	// padding-bottom: $gap-size
+	padding-top: $gap-size
 	margin: 0 auto
 	overflow: hidden
 	+bp(large)
 		padding: 0 $gap-size-large
-		// padding-bottom: $gap-size-large
+		padding-top: $gap-size-large
+	+bp(larger)
+		padding-top: 2*$gap-size-large
 	+clearfix
