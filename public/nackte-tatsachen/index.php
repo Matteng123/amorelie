@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="//cdn.amorelie.de/skin/frontend/amorelie/default/ico/apple-touch-icon-120x120-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//cdn.amorelie.de/skin/frontend/amorelie/default/ico/apple-touch-icon-144x144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="//cdn.amorelie.de/skin/frontend/amorelie/default/ico/apple-touch-icon-152x152-precomposed.png">
-
+		<?php print_r($_POST); ?>
 		<meta property="og:url"                content="http://amorelie.matteng.de/nackte-tatsachen/?section=<?php echo $_POST['section'] ?>" />
 		<meta property="og:type"               content="article" />
 		<?php if($_POST['section'] == 'fact1') : ?>
