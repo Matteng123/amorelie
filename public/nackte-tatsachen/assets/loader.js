@@ -98,11 +98,9 @@
 	        key: "startApplication",
 	        value: function startApplication() {
 	            if (window.CM.App == undefined) {
-	                setTimeout(this.startApplication, 500);
+	                setTimeout(CM.Loader.startApplication, 500);
 	            } else {
-	
 	                CM.App.blastoff();
-	
 	                document.body.setAttribute("class", document.body.getAttribute("class").split("loading").join("loaded"));
 	                setTimeout(function () {
 	                    -document.body.setAttribute("class", document.body.getAttribute("class").split("loaded").join("hideloader"));
