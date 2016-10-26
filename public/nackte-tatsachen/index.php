@@ -357,8 +357,7 @@
     <div class="Header">
       <div class="Header-body">
         <div class="Button--toggle"><span></span></div>
-        <div class="Header-logo"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <div class="Header-logo">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 295.3 81.2" preserveAspectRatio="xMinYMid meet" xml:space="preserve">
 <style type="text/css">
@@ -489,8 +488,7 @@
       <div class="view">
         <div id="start">
           <div class="Intro">
-            <div class="Intro-body"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <div class="Intro-body">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
 <svg version="1.1" baseProfile="tiny" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" width="45.354px" height="45.354px" viewBox="0 0 45.354 45.354" overflow="auto" xml:space="preserve">
@@ -518,8 +516,7 @@
                 <div><span>Share</span><span>1</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--top"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--top">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 710.9 405.6" style="enable-background:new 0 0 710.9 405.6;" xml:space="preserve" preserveAspectRatio="xMidYMin meet">
 <style type="text/css">
@@ -689,8 +686,7 @@
                 <div><span>Share</span><span>2</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
 <svg version="1.1" baseProfile="tiny" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	 x="0px" y="0px" viewBox="0.06 255.06 373 358" xml:space="preserve">
@@ -794,8 +790,7 @@
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
               <div class="Figure Figure--full">
-                <div class="Figure--animation"><span class="headline">Kondomverbrauch seit Du auf der Seite bist:</span><span class="counter counter--5"></span></div><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <div class="Figure--animation"><span class="headline">Kondomverbrauch seit Du auf der Seite bist:</span><span class="counter counter--5"></span></div>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 -10.94 255.121 277" enable-background="new 0 -10.94 255.121 277"
@@ -870,8 +865,7 @@
                     </ul>
                     <ul class="third">
                       <li>°</li>
-                    </ul></span></div><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    </ul></span></div>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-71.94 -21.94 369.579 301" enable-background="new -71.94 -21.94 369.579 301"
@@ -976,8 +970,7 @@
                       <input type="text" name="age" value="??" max="2"></span></div>
                   <div><span>Deine Sexy-Time in Tagen:
                       <input type="number" name="time" value="00" readonly="readonly"></span></div>
-                </div><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                </div>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-184.25 -49.94 623.622 305.061"
@@ -1065,8 +1058,7 @@
                 <div><span>Share</span><span>12</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="340.158px" height="255.121px" viewBox="-42.519 0 340.158 255.121" enable-background="new -42.519 0 340.158 255.121"
@@ -1168,8 +1160,7 @@
                 <div><span>Share</span><span>13</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--top"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--top">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-42.518 -14.172 340.157 283.464"
@@ -1297,8 +1288,7 @@
                 <div><span>Share</span><span>14</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-56.691 0 368.503 255.121" enable-background="new -56.691 0 368.503 255.121"
@@ -1401,8 +1391,7 @@
                 <div><span>Share</span><span>17</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--top"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--top">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-70.865 -64.94 396.851 368.504"
@@ -1501,8 +1490,7 @@
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
               <div class="Figure Figure--full">
-                <div class="Figure--animation"><span class="counter counter--18"></span><span class="headline">Tabletten verkauft seit deinem Besuch auf der Webseite</span></div><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <div class="Figure--animation"><span class="counter counter--18"></span><span class="headline">Tabletten verkauft seit deinem Besuch auf der Webseite</span></div>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 -13.94 255.121 282" enable-background="new 0 -13.94 255.121 282"
@@ -1625,8 +1613,7 @@
                 <div><span>Share</span><span>21</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-85.038 -70.865 425.197 396.851"
@@ -1718,8 +1705,7 @@
                       <li>8</li>
                       <li>9</li>
                       <li>0</li>
-                    </ul></span><span class="subline">Sekunden</span></div><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    </ul></span><span class="subline">Sekunden</span></div>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="kussmund" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-56.692 -56.691 368.504 368.504"
@@ -1791,8 +1777,7 @@
                 <div><span>Share</span><span>25</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--top"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--top">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-155.904 -155.904 566.929 566.929"
@@ -1851,8 +1836,7 @@
                 <div><span>Share</span><span>26</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-56.692 -42.518 368.504 340.157"
@@ -1943,8 +1927,7 @@
                 <div><span>Share</span><span>29</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-70.865 -56.692 396.851 368.504"
@@ -2004,8 +1987,7 @@
                 <div><span>Share</span><span>30</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--left"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--left">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-14.172 0 283.464 340.158" enable-background="new -14.172 0 283.464 340.158"
@@ -2101,8 +2083,7 @@
                       <li>3</li>
                       <li>4</li>
                       <li>5</li>
-                    </ul></span></div><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    </ul></span></div>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-61.511 -28.345 357.166 311.812"
@@ -2182,8 +2163,7 @@
                 <div><span>Share</span><span>32</span></div></a></div>
             <div class="Fb--hint"><img src="assets/images/facebook-share.png"></div>
             <div class="Box-body">
-              <div class="Figure Figure--top"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <div class="Figure Figure--top">
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-85.038 -42.519 425.197 340.158"
