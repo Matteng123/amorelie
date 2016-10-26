@@ -486,9 +486,7 @@
 			<div class="view">
 				<div id="start">
 					<div class="Intro">
-						<div class="Intro-body"><?xml version="1.0" encoding="utf-8"?>
-		<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+						<div class="Intro-body">
 		<svg version="1.1" baseProfile="tiny" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 		x="0px" y="0px" width="45.354px" height="45.354px" viewBox="0 0 45.354 45.354" overflow="auto" xml:space="preserve">
 		<path fill="#E87AAA" d="M38.185,8.2c-1.83-1.842-4.467-3.022-7.242-3.022c-1.633,0-3.168,0.381-4.644,1.142
