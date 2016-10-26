@@ -200,11 +200,10 @@ var MainView = View.extend({
 							// Close Navigation
 							this.handleClickClose();
 					}
-				
+
 		},
 
 		scrollTo: function(){
-				console.log("scrollTo");
 				if (CM.App._params != {} && CM.App._params.section != null){
 						var id = this.query('#'+CM.App._params.section);
 						console.log(id);
