@@ -16,8 +16,11 @@
 		+bp(large)
 			padding: 0 $gap-size-large
 	&-logo
-		padding: $gap-size 0
+		height: $header-height-mobil
+		+bp(medium)
+			height: $header-height
 		svg
+			height: 100%
 			width: auto
 			max-width: 150px
 			+bp(medium)
