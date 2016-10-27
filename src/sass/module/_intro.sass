@@ -35,18 +35,33 @@
 				background-color: $color-navigation
 				position: absolute
 				top: 50%
+				left: 50%
 			&:after
+				+transform(translateX(80px))
 				margin-left: 20px
 			&:before
+				+transform(translateX(-80px))
 				margin-left: -45px
+			+bp(smaller)
+				&:after
+					+transform(translateX(140px))
+				&:before
+					+transform(translateX(-140px))
+			+bp(medium)
+				&:after
+					+transform(translateX(140px))
+				&:before
+					+transform(translateX(-150px))
 			+bp(large)
 				font-size: 48px
 				&:after,
 				&:before
 					width: 120px
 				&:after
+					+transform(translateX(180px))
 					margin-left: 40px
 				&:before
+					+transform(translateX(-180px))
 					margin-left: -160px
 
 
