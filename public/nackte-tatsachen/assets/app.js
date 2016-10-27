@@ -36435,7 +36435,7 @@
 					if (CM.App._params != {} && CM.App._params.section != null) {
 							var id = this.query('#' + CM.App._params.section);
 							console.log(id);
-							TweenMax.to(window, 1.2, { scrollTo: { x: 0, y: id.offsetTop - 150 }, overwrite: true, ease: Power2.easeOut });
+							TweenMax.to(window, 1.2, { scrollTo: { x: 0, y: id.offsetTop }, overwrite: true, ease: Power2.easeOut });
 					}
 			},
 	
