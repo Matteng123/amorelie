@@ -3,7 +3,8 @@
 */
 import ScrollMagic from 'ScrollMagic';
 import AnimationGsap from 'animation.gsap';
-import Indicators from 'indicators';
+// import Indicators from 'indicators';
+import dom from 'ampersand-dom';
 
 let smLayer = {
 	_smTweenElements: function(){
@@ -30,6 +31,7 @@ let smLayer = {
 							start = function(){
 								TweenMax.fromTo('#klammer', 0.05, {rotation:-1}, {rotation:1, yoyo:true, repeat:100, transformOrigin:'center bottom'});
 								TweenMax.fromTo('#vibrator', 0.05, {rotation:-0.5}, {rotation:0.5, yoyo:true, repeat:100, transformOrigin:'center top'});
+								TweenMax.delayedCall(2, function(){ dom.addClass(document.body, 'Fb--hide') } );
 							}
 						} else if(i == 6){
 							start = function(){
@@ -95,19 +97,19 @@ let smLayer = {
 						let rand = Math.random();
 						let tween = null;
 						if(rand < 0.5){
-							tween = TweenMax.staggerFromTo(elements, 1.1,
+							tween = TweenMax.staggerFromTo(elements, 1.75,
 																		{y: 0, z:0, rotationX:-90, transformOrigin:"center top", opacity: 0},
 																		{y: 0, z:0, rotationX:0, opacity: 1, ease: Ease.easeInOut, onStart:start},
 																		0.25
 																);
 						} else if(rand >= 0.5 && rand < 0.75){
-							tween = TweenMax.staggerFromTo(elements, 1.1,
+							tween = TweenMax.staggerFromTo(elements, 1.75,
 																		{y: 0, z:0, rotationY:90, transformOrigin:"left center", opacity: 0},
 																		{y: 0, z:0, rotationY:0, opacity: 1, ease: Ease.easeInOut, onStart:start},
 																		0.25
 																);
 						} else {
-							tween = TweenMax.staggerFromTo(elements, 1.1,
+							tween = TweenMax.staggerFromTo(elements, 1.75,
 																		{y: 0, z:0, rotationY:-90, transformOrigin:"right center", opacity: 0},
 																		{y: 0, z:0, rotationY:0, opacity: 1, ease: Ease.easeInOut, onStart:start},
 																		0.25

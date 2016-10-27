@@ -101,10 +101,6 @@ var MainView = View.extend({
 
 				// Scroll to paramter 'section'
 				TweenMax.delayedCall(0.25, function(){ self.handleUpdateView() });
-
-				setTimeout(function (){
-					dom.addClass(document.body, 'Fb--hide');
-				}, 2500);
 		},
 
 		/*
