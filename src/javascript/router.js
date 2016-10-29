@@ -17,7 +17,7 @@ let Router = AmpersandRouter.extend({
 
 			if(value.indexOf(".html") != -1){
 				var params = value.split("/");
-				param = params[params.length - 1].split('.html')[0];
+				var param = params[params.length - 1].split('.html')[0];
 				if(CM.App._params != {}) CM.App._params = {};
 				CM.App._params.section = param;
 			}
