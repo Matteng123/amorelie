@@ -16,10 +16,9 @@ let Router = AmpersandRouter.extend({
 			if(value == null) value = "";
 
 			if(value.indexOf(".html") != -1){
-				var params = value.split("/");
-				var param = params[params.length - 1].split('.html')[0];
-				if(CM.App._params != {}) CM.App._params = {};
-				CM.App._params.section = param;
+				let htmls = value.split("/");
+				let htmlToParam = htmls[htmls.length - 1].split('.html')[0];
+				params = "section="+htmlToParam;
 			}
 
 			// prüfe ob sich nur der search String ?x=y geändert hat

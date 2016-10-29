@@ -1770,10 +1770,9 @@
 			if (value == null) value = "";
 	
 			if (value.indexOf(".html") != -1) {
-				var params = value.split("/");
-				var param = params[params.length - 1].split('.html')[0];
-				if (CM.App._params != {}) CM.App._params = {};
-				CM.App._params.section = param;
+				var htmls = value.split("/");
+				var htmlToParam = htmls[htmls.length - 1].split('.html')[0];
+				params = "section=" + htmlToParam;
 			}
 	
 			// prüfe ob sich nur der search String ?x=y geändert hat
@@ -35761,9 +35760,9 @@
 			},
 	
 			scrollTo: function scrollTo() {
+					console.log("scrollTo", CM.App._params.section);
 					if (CM.App._params != {} && CM.App._params.section != null) {
 							var id = this.query('#' + CM.App._params.section);
-							console.log(id);
 							TweenMax.to(window, 1.2, { scrollTo: { x: 0, y: id.offsetTop }, overwrite: true, ease: Power2.easeOut });
 					}
 			},
