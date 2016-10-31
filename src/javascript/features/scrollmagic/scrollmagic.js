@@ -44,7 +44,7 @@ let smLayer = {
 												 return y % 500; //force x value to be between 0 and 500 using modulus
 											 }
 										 },
-									repeat: -1
+									repeat: 5
 								});
 								TweenMax.set('.counter--6 ul.first li', {opacity:0, overwrite:true});
 								TweenMax.set('.counter--6 ul.second li', {opacity:0, overwrite:true});
@@ -70,7 +70,7 @@ let smLayer = {
 											 return (y % 400) - 400; //force x value to be between 0 and 500 using modulus
 										 }
 									 },
-								repeat: -1
+								repeat: 5
 							});
 						} else if(i == 22){
 							start = function(){
