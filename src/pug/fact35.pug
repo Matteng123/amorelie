@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 35
+	- var FBFaktTitle = "Frohe Zweinacht"
+	- var FBFaktText = "In Deutschland kommen im September die meisten Babys auf die Welt – fast 10% mehr als in der Jahresmitte.. Und im Dezember rund um das »Fest der Liebe« wurden sie folglich gezeugt."
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

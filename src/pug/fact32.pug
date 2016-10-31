@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 32
+	- var FBFaktTitle = "Spitze unterm Baum"
+	- var FBFaktText = "48% der Frauen wünschen sich zu Weihnachten »Dessous«. Ein absoluter Spitzen-Wert, wie wir finden!"
+	- var FBFaktImage = "32_spitze.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

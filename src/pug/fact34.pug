@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 34
+	- var FBFaktTitle = "Lang oder kurz"
+	- var FBFaktText = "Satte 324 Sekunden bzw. schlappe 5,4 Minuten. So lange dauert durchschnittlicher Sex. Der eine findet’s lang, die andere kurz. Wir sagen: Hauptsache ihr habt Spaß!"
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

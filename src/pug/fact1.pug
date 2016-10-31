@@ -1,54 +1,14 @@
 extends _layout/_layout
 
 block title
-		title In Socken verlocken - Fakt 1 // 36 NACKTE TATSACHEN presented by Amorelie
+	- var FBFaktNr = 1
+	- var FBFaktTitle = "In Socken verlocken"
+	- var FBFaktText = "Jeder von uns kennt sich in Sachen Liebe, Erotik & Sex bestens aus. Klar doch! Glaubst Du’s wirklich? Damit das ab jetzt tatsächlich so ist, haben wir für Dich die 36 heißesten, witzigsten, schlüpfrigsten und härtesten Fakten über das »schönste Thema der Welt« Tag & Nacht recherchiert und auf den Punkt gebracht. Na dann: Jetzt lässt die Wahrheit die Hüllen fallen!"
+	- var FBFaktImage = "01_sockenleine.jpg"
+	+metatitle()
 
 block meta
-		meta(name="description", content="Jeder von uns kennt sich in Sachen Liebe, Erotik & Sex bestens aus. Klar doch! Glaubst Du’s wirklich? Damit das ab jetzt tatsächlich so ist, haben wir für Dich die 36 heißesten, witzigsten, schlüpfrigsten und härtesten Fakten über das »schönste Thema der Welt« Tag & Nacht recherchiert und auf den Punkt gebracht. Na dann: Jetzt lässt die Wahrheit die Hüllen fallen!")
-		meta(property="og:url", content=BaseURL+"/"+BaseVZ+"/fakt1.html")
-		meta(property="og:type", content="article")
-		meta(property="og:title", content="In Socken verlocken - Fakt 1 // 36 NACKTE TATSACHEN presented by Amorelie")
-		meta(property="og:description", content="Hättest Du es gewusst: Wärme erhöht die Orgasmus-Wahrscheinlichkeit. Beim Sex sollten Männer und Frauen daher ruhig die Socken anlassen. Ob in Socken dann aber noch heißer Sex aufkommt, wurde nicht untersucht. Wir empfehlen: Netzstrümpfe!")
+	+fbmeta()
 
 block content
-	#start
-		include ./_sections/intro.pug
-	.Boxen
-		include ./_sections/box1.pug
-		include ./_sections/box2.pug
-		include ./_sections/box3.pug
-		include ./_sections/box4.pug
-		include ./_sections/box5.pug
-		include ./_sections/box6.pug
-		include ./_sections/box7.pug
-		include ./_sections/box8.pug
-		include ./_sections/box9.pug
-		include ./_sections/box10.pug
-		include ./_sections/box11.pug
-		include ./_sections/box12.pug
-		include ./_sections/box13.pug
-		include ./_sections/box14.pug
-		include ./_sections/box15.pug
-		include ./_sections/box16.pug
-		include ./_sections/box17.pug
-		include ./_sections/box18.pug
-		include ./_sections/box19.pug
-		include ./_sections/box20.pug
-		include ./_sections/box21.pug
-		include ./_sections/box22.pug
-		include ./_sections/box23.pug
-		include ./_sections/box24.pug
-		include ./_sections/box25.pug
-		include ./_sections/box26.pug
-		include ./_sections/box27.pug
-		include ./_sections/box28.pug
-		include ./_sections/box29.pug
-		include ./_sections/box30.pug
-		include ./_sections/box31.pug
-		include ./_sections/box32.pug
-		include ./_sections/box33.pug
-		include ./_sections/box34.pug
-		include ./_sections/box35.pug
-		include ./_sections/box36.pug
-	#bottom
-		include ./_sections/outro.pug
+	include ./_sections/all.pug

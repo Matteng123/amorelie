@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 20
+	- var FBFaktTitle = "SperMathematik"
+	- var FBFaktText = "Wusstest Du, dass ein einziger Mann in 2 Wochen so viele Spermien produziert, dass es theoretisch ausreichte, jede fruchtbare Frau auf diesem Planeten zu schwängern? Wer rechnet so etwas eigentlich aus?"
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

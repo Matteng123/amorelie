@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 16
+	- var FBFaktTitle = "Neue Spielplätze"
+	- var FBFaktText = "Immer im Bett oder auf dem Küchentisch ist ja auch langweilig? Genau! 46% der Deutschen hatten deshalb bereits im Auto Sex, 32% auf dem Balkon und 31% im Park."
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

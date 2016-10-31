@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 31
+	- var FBFaktTitle = "Toy Toy Toy"
+	- var FBFaktText = "Um dem Sexleben neuen Schwung zu verleihen, greifen 45% der Deutschen gerne mal zu Sextoys und anderen Hilfsmitteln. Weitere 33% könnten sich vorstellen, eins anzuschaffen."
+	- var FBFaktImage = "31_toy.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

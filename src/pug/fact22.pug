@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 22
+	- var FBFaktTitle = "Kurze Munterbrechung"
+	- var FBFaktText = "Studien zufolge denkt über ein Drittel der Männer alle 30 Sekunden an Sex – bei den Frauen nur jede zehnte. Ob jeweils für 30 Sekunden wurde leider nicht getestet!"
+	- var FBFaktImage = "22_mund.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

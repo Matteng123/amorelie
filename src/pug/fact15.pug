@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 15
+	- var FBFaktTitle = "Woran denkst Du gerade?"
+	- var FBFaktText = "26% denken beim Sex an den Urlaub, 14% an ihren Beruf, 12% an die Probleme mit dem Nachwuchs und 6% ans Kochen. Und woran denkst Du?"
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

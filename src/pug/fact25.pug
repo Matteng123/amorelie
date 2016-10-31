@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 25
+	- var FBFaktTitle = "Gelenkich"
+	- var FBFaktText = "Apropos „Selbst ist der Mann“: Jeder vierte Mann hat schon versucht, sich selbst oral zu befriedigen. Was für eine Vorstellung!"
+	- var FBFaktImage = "25_rundpfeil.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 33
+	- var FBFaktTitle = "Schneller Nachwuchs"
+	- var FBFaktText = "Bei Aussicht auf baldigen Sex wächst bei Männern einiges – sogar der Bart deutlich stärker! Geht’s dann rund, sprießt er noch mehr. Also Ladies: Achtet auf Sprießer!"
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 17
+	- var FBFaktTitle = "Gib mir 5"
+	- var FBFaktText = "Die meisten Deutschen wünschen sich rund 5x pro Woche Sex. An der Umsetzung hapert es aber, denn im Schnitt passiert’s nur 2x!"
+	- var FBFaktImage = "17_kalender.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

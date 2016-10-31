@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 29
+	- var FBFaktTitle = "S.O.S – Sex oder Streiten"
+	- var FBFaktText = "Laut einer Studie werden Paare, die sich länger als eine Minute direkt in die Augen sehen, entweder streiten oder Sex haben. Dann doch lieber Sex, oder?!"
+	- var FBFaktImage = "29_rettungsring.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

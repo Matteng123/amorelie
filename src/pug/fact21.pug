@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 21
+	- var FBFaktTitle = "Uhrzeit-Triebe"
+	- var FBFaktText = "Frauen kommen zwischen 23 und 2 Uhr nachts am besten in Stimmung. Männer haben eher morgens zwischen 6 und 9 Uhr die meiste Lust."
+	- var FBFaktImage = "21_wecker.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 27
+	- var FBFaktTitle = "Absoluter Wohnsinn"
+	- var FBFaktText = "Rund 30% der Paare haben beim Sex schon Einrichtungsgegenstände zerstört. Sollten wir vielleicht auch Möbel anbieten?"
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

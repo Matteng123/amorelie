@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 28
+	- var FBFaktTitle = "Ich schau Dir in die Augen, Kleines!"
+	- var FBFaktText = "Männer gucken den Frauen, mit denen sie schlafen, tatsächlich vor allem ins Gesicht. Und nicht auf Brüste, Bauch oder Oberschenkel, wie viele Frauen vielleicht denken."
+	- var FBFaktImage = "00_allgemein.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

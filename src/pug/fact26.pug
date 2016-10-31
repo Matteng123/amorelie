@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 26
+	- var FBFaktTitle = "Flitzeblank"
+	- var FBFaktText = "Partner, die im Haushalt mit anpacken, haben 50% mehr Sex als solche, die es nicht tun. Merke: Wenn beide Partner anpacken, hat also jeder was davon."
+	- var FBFaktImage = "26_flitzeblank.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug

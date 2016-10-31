@@ -1,0 +1,14 @@
+extends _layout/_layout
+
+block title
+	- var FBFaktNr = 30
+	- var FBFaktTitle = "Süßer die Glocken nie klingen"
+	- var FBFaktText = "34% der Deutschen hatten schon mal Sex auf einer Weihnachtsfeier. Ob mit dem Chef, der Chefin oder dem süßen Kellner, war nicht herauszufinden."
+	- var FBFaktImage = "30_kugeln.jpg"
+	+metatitle()
+
+block meta
+	+fbmeta()
+
+block content
+	include ./_sections/all.pug
