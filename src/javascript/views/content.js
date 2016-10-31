@@ -14,6 +14,7 @@ let Content = SMContent.extend({
 
 	events: {
 		'mouseover #fact1': 'handleOver1',
+		'mouseover #fact6': 'handleOver6',
 		'mouseover #fact21': 'handleOver21',
 		'mouseover #fact22': 'handleOver22',
 		'mouseover #fact25': 'handleOver25',
