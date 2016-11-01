@@ -1,10 +1,10 @@
 {
   "root": {
-    "domain": "http://amorelie.de",
+    "domain": "http://nackte-tatsachen.amorelie.de",
     "appName": "Amorelie-36NackteTatsachen",
     "appDescription": "-",
     "src": "./src",
-    "dest": "./public/nackte-tatsachen",
+    "dest": "./public/",
     "assets": "/assets"
   },
 
