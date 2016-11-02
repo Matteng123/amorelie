@@ -14,7 +14,6 @@ let Content = SMContent.extend({
 
 	events: {
 		'mouseover #fact1': 'handleOver1',
-		'mouseover #fact6': 'handleOver6',
 		'mouseover #fact21': 'handleOver21',
 		'mouseover #fact22': 'handleOver22',
 		'mouseover #fact25': 'handleOver25',
@@ -161,12 +160,8 @@ let Content = SMContent.extend({
 			maxAge = 16;
 		}
 
-		var days = (maxAge-startAge)*0.45;
-		if(days < 10){
-			days = this.decimalAdjust('round', days, -1)
-		} else {
-			days = Math.round(days);
-		}
+		var days = (maxAge-startAge)*365/100*0.45;
+				days = this.decimalAdjust('round', days, -1);
 
 		this.output9.setAttribute("value", days);
 		TweenMax.to('#largepointer', 0.5, {rotation:360, transformOrigin:'right bottom', onComplete:function(){

@@ -5855,7 +5855,6 @@
 	
 		events: {
 			'mouseover #fact1': 'handleOver1',
-			'mouseover #fact6': 'handleOver6',
 			'mouseover #fact21': 'handleOver21',
 			'mouseover #fact22': 'handleOver22',
 			'mouseover #fact25': 'handleOver25',
@@ -6000,12 +5999,8 @@
 				maxAge = 16;
 			}
 	
-			var days = (maxAge - startAge) * 0.45;
-			if (days < 10) {
-				days = this.decimalAdjust('round', days, -1);
-			} else {
-				days = Math.round(days);
-			}
+			var days = (maxAge - startAge) * 365 / 100 * 0.45;
+			days = this.decimalAdjust('round', days, -1);
 	
 			this.output9.setAttribute("value", days);
 			TweenMax.to('#largepointer', 0.5, { rotation: 360, transformOrigin: 'right bottom', onComplete: function onComplete() {
@@ -19068,6 +19063,7 @@
 					} else if (i == 6) {
 						start = function start() {
 							TweenMax.killTweensOf(".tropfen");
+							TweenMax.set(".tropfen", { y: 0 });
 							TweenMax.to(".tropfen", 7, {
 								ease: Linear.easeNone,
 								y: "+=500", //move each box 500px to right
@@ -19092,18 +19088,20 @@
 								} }, 0.1);
 						};
 					} else if (i == 18) {
-						TweenMax.killTweensOf(".pillen");
-						TweenMax.to(".pillen", 7, {
-							ease: Linear.easeNone,
-							y: "+=400", //move each box 500px to right
-							rotation: 45,
-							modifiers: {
-								y: function y(_y2) {
-									return _y2 % 400 - 400; //force x value to be between 0 and 500 using modulus
-								}
-							},
-							repeat: 5
-						});
+						start = function start() {
+							TweenMax.killTweensOf(".pillen");
+							TweenMax.set(".pillen", { y: 0 });
+							TweenMax.to(".pillen", 7, {
+								ease: Linear.easeNone,
+								y: "+=400", //move each box 500px to right
+								modifiers: {
+									y: function y(_y2) {
+										return _y2 % 400 - 400; //force x value to be between 0 and 500 using modulus
+									}
+								},
+								repeat: 5
+							});
+						};
 					} else if (i == 22) {
 						start = function start() {
 							TweenMax.set('.counter--22 ul.first li', { opacity: 0, overwrite: true });

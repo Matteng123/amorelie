@@ -36,6 +36,7 @@ let smLayer = {
 						} else if(i == 6){
 							start = function(){
 								TweenMax.killTweensOf(".tropfen");
+								TweenMax.set(".tropfen", {y:0});
 								TweenMax.to(".tropfen", 7, {
 										 ease: Linear.easeNone,
 										 y: "+=500", //move each box 500px to right
@@ -60,18 +61,20 @@ let smLayer = {
 								}}, 0.1);
 							}
 						} else if(i == 18){
-							TweenMax.killTweensOf(".pillen");
-							TweenMax.to(".pillen", 7, {
-									 ease: Linear.easeNone,
-									 y: "+=400", //move each box 500px to right
-									 rotation: 45,
-									 modifiers: {
-										 y: function(y) {
-											 return (y % 400) - 400; //force x value to be between 0 and 500 using modulus
-										 }
-									 },
-								repeat: 5
-							});
+							start = function(){
+								TweenMax.killTweensOf(".pillen");
+								TweenMax.set(".pillen", {y:0});
+								TweenMax.to(".pillen", 7, {
+										 ease: Linear.easeNone,
+										 y: "+=400", //move each box 500px to right
+										 modifiers: {
+											 y: function(y) {
+												 return (y % 400) - 400; //force x value to be between 0 and 500 using modulus
+											 }
+										 },
+									repeat: 5
+								});
+							}
 						} else if(i == 22){
 							start = function(){
 								TweenMax.set('.counter--22 ul.first li', {opacity:0, overwrite:true});
